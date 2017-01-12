@@ -1,0 +1,26 @@
+{
+  "name": "react-native-multi-select",
+  "version": "0.0.1",
+  "description": "Simple multi-select component for react-native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toystars/react-native-multi-select.git"
+  },
+  "keywords": [
+    "reactnative",
+    "multiselect",
+    "multi-select",
+    "react-native",
+    "javascript"
+  ],
+  "author": "Mustapha Babatunde Oluwaleke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toystars/react-native-multi-select/issues"
+  },
+  "homepage": "https://github.com/toystars/react-native-multi-select#readme"
+}
