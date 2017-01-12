@@ -2,7 +2,8 @@
 
 > Simple multi-select component for react-native (Select2 for react-native).
 
-## Installation
+
+## Screenshots
 
 <img src="https://cloud.githubusercontent.com/assets/16062709/21911762/84c8453e-d922-11e6-97f3-7ae5c10fccb9.png" width="350">  <img src="https://cloud.githubusercontent.com/assets/16062709/21911761/84c7aca0-d922-11e6-9299-466df4b20e20.png" width="350">
 <img src="https://cloud.githubusercontent.com/assets/16062709/21911764/84cbf1ac-d922-11e6-8779-e772f3d83fd9.png" width="350">  <img src="https://cloud.githubusercontent.com/assets/16062709/21911763/84cb5b8e-d922-11e6-839b-c1ddd349c8c6.png" width="350">
@@ -10,7 +11,7 @@
 
 
 
-## Screenshots
+## Installation
 
 ``` bash
 $ npm install react-native-multiple-select --save
