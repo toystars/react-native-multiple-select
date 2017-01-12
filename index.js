@@ -4,5 +4,6 @@
  * MIT Licensed
  */
 
-import MultiSelect from './lib/react-native-multi-select';
-export default MultiSelect;
+ 'use strict';
+
+module.exports = require('./lib/react-native-multi-select');

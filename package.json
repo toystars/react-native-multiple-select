@@ -25,8 +25,6 @@
   "homepage": "https://github.com/toystars/react-native-multi-select#readme",
   "dependencies": {
     "native-base": "^0.5.20",
-    "react": "^15.4.2",
-    "react-native": "^0.40.0",
     "react-native-vector-icons": "^4.0.0",
     "underscore": "^1.8.3"
   }
