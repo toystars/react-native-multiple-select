@@ -2,11 +2,15 @@
 
 > Simple multi-select component for react-native (Select2 for react-native).
 
-![1](https://cloud.githubusercontent.com/assets/16062709/21911762/84c8453e-d922-11e6-97f3-7ae5c10fccb9.png)  ![2](https://cloud.githubusercontent.com/assets/16062709/21911761/84c7aca0-d922-11e6-9299-466df4b20e20.png)
-![3](https://cloud.githubusercontent.com/assets/16062709/21911764/84cbf1ac-d922-11e6-8779-e772f3d83fd9.png) ![4](https://cloud.githubusercontent.com/assets/16062709/21911763/84cb5b8e-d922-11e6-839b-c1ddd349c8c6.png)
-![5](https://cloud.githubusercontent.com/assets/16062709/21911765/84d0cd94-d922-11e6-84be-8dee40b2c2c1.png)
-
 ## Installation
+
+<img src="https://cloud.githubusercontent.com/assets/16062709/21911762/84c8453e-d922-11e6-97f3-7ae5c10fccb9.png" width="500">  <img src="https://cloud.githubusercontent.com/assets/16062709/21911761/84c7aca0-d922-11e6-9299-466df4b20e20.png" width="500">
+<img src="https://cloud.githubusercontent.com/assets/16062709/21911764/84cbf1ac-d922-11e6-8779-e772f3d83fd9.png" width="500">  <img src="https://cloud.githubusercontent.com/assets/16062709/21911763/84cb5b8e-d922-11e6-839b-c1ddd349c8c6.png" width="500">
+<img src="https://cloud.githubusercontent.com/assets/16062709/21911765/84d0cd94-d922-11e6-84be-8dee40b2c2c1.png" width="500"> 
+
+
+
+## Screenshots
 
 ``` bash
 $ npm install react-native-multiple-select --save
