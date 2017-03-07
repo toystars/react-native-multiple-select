@@ -96,6 +96,23 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `selectedItems
 | searchInputStyle | No   | Style object for multi-select input element  |
 
 
+### Removing all selected items
+
+To use, add ref to MultiSelect component in parent component, then call method against reference. i.e.
+
+```javascript
+<MultiSelect
+  ref={c => this._multiSelect = c}
+  ...
+/>
+
+clearSelectedCategories = () => {
+   this._multiSelect.removeAllItems();
+};
+    
+``` 
+
+
 ## Contributing
 
 Contributions are **welcome** and will be fully **credited**.
