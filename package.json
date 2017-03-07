@@ -4,7 +4,11 @@
   "description": "Simple multi-select component for react-native",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "lint": "eslint lib/"
+  },
+  "jest": {
+    "preset": "jest-react-native"
   },
   "repository": {
     "type": "git",
@@ -14,8 +18,7 @@
     "reactnative",
     "multiselect",
     "multi-select",
-    "react-native",
-    "javascript"
+    "react-native"
   ],
   "author": "Mustapha Babatunde Oluwaleke",
   "license": "MIT",
@@ -26,5 +29,19 @@
   "dependencies": {
     "native-base": "^0.5.20",
     "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^18.0.0",
+    "babel-preset-react-native": "^1.9.1",
+    "eslint": "^3.15.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.9.0",
+    "jest": "^18.1.0",
+    "jest-react-native": "^18.0.0",
+    "react-test-renderer": "^15.4.2",
+    "remote-redux-devtools": "^0.5.7"
   }
 }
