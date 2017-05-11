@@ -1,6 +1,6 @@
 {
   "name": "react-native-multiple-select",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple multi-select component for react-native",
   "main": "index.js",
   "scripts": {
@@ -26,13 +26,7 @@
     "url": "https://github.com/toystars/react-native-multiple-select/issues"
   },
   "homepage": "https://github.com/toystars/react-native-multiple-select#readme",
-  "dependencies": {
-    "native-base": "0.5.18",
-    "react": "15.4.0",
-    "react-native": "0.38.0",
-    "react-native-vector-icons": "2.1.0",
-    "underscore": "^1.8.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-eslint": "^7.1.1",
     "babel-jest": "^18.0.0",
@@ -46,5 +40,12 @@
     "jest-react-native": "^18.0.0",
     "react-test-renderer": "^15.4.2",
     "remote-redux-devtools": "^0.5.7"
+  },
+  "peerDependencies": {
+    "native-base": "^2.1.3",
+    "react": "16.0.0-alpha.6",
+    "react-native": "^0.44.0",
+    "react-native-vector-icons": "^4.1.1",
+    "underscore": "^1.8.3"
   }
 }
