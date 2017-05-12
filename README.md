@@ -1,5 +1,7 @@
 # react-native-multiple-select
 
+[![npm](https://img.shields.io/npm/v/react-native-multiple-select.svg)](https://www.npmjs.com/package/react-native-multiple-select) [![Downloads](https://img.shields.io/npm/dt/react-native-multiple-select.svg)](https://www.npmjs.com/package/react-native-multiple-select) [![Licence](https://img.shields.io/npm/l/react-native-multiple-select.svg)](https://www.npmjs.com/package/react-native-multiple-select)
+
 > Simple multi-select component for react-native (Select2 for react-native).
 
 
@@ -13,6 +15,12 @@
 ``` bash
 $ npm install react-native-multiple-select --save
 ```
+or use yarn
+
+``` bash
+$ yarn add react-native-multiple-select
+```
+
 
 ## Usage
 Note: Ensure to add and configure [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) to your project before using this package.
