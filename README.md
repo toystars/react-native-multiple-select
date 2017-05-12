@@ -4,10 +4,7 @@
 
 
 ## Screenshots
-
-<img src="https://cloud.githubusercontent.com/assets/16062709/21911762/84c8453e-d922-11e6-97f3-7ae5c10fccb9.png" width="350">  <img src="https://cloud.githubusercontent.com/assets/16062709/21911761/84c7aca0-d922-11e6-9299-466df4b20e20.png" width="350">
-<img src="https://cloud.githubusercontent.com/assets/16062709/21911764/84cbf1ac-d922-11e6-8779-e772f3d83fd9.png" width="350">  <img src="https://cloud.githubusercontent.com/assets/16062709/21911763/84cb5b8e-d922-11e6-839b-c1ddd349c8c6.png" width="350">
-<img src="https://cloud.githubusercontent.com/assets/16062709/21911765/84d0cd94-d922-11e6-84be-8dee40b2c2c1.png" width="350"> 
+<img width="350" alt="screen shot 2017-05-13 at 12 04 57 am" src="https://cloud.githubusercontent.com/assets/16062709/26019755/df6cbf96-376f-11e7-84e4-e28677425563.png">  <img width="350" alt="screen shot 2017-05-13 at 12 03 53 am" src="https://cloud.githubusercontent.com/assets/16062709/26019739/b96373ee-376f-11e7-91d8-505dad416415.png">  <img width="350" alt="screen shot 2017-05-13 at 12 00 05 am" src="https://cloud.githubusercontent.com/assets/16062709/26019710/7735a636-376f-11e7-97b3-4c752316ffa5.png">  <img width="350" alt="screen shot 2017-05-13 at 12 00 25 am" src="https://cloud.githubusercontent.com/assets/16062709/26019708/773377bc-376f-11e7-92f1-6a64948db1ff.png">  <img width="350" alt="screen shot 2017-05-13 at 12 00 41 am" src="https://cloud.githubusercontent.com/assets/16062709/26019709/77357206-376f-11e7-91a5-06578172202d.png">  <img width="350" alt="screen shot 2017-05-13 at 12 02 46 am" src="https://cloud.githubusercontent.com/assets/16062709/26019722/8e31a146-376f-11e7-8d80-056a5b7d0887.png">
 
 
 
@@ -27,22 +24,22 @@ The snippet below shows how the component can be used
 // import component
 import MultiSelect from 'react-native-multiple-select';
 
-let items = [{
-    id: '92iijs7yta',
-    name: 'First Item'
+const items = [{
+  id: '92iijs7yta',
+  name: 'Ondo',
 }, {
-   id: 'a0s0a8ssbsd',
-   name: 'Second Item'
+  id: 'a0s0a8ssbsd',
+  name: 'C2G',
 }, {
-   id: '16hbajsabsd',
-   name: 'Third Item'
+  id: '16hbajsabsd',
+  name: 'Calabar',
 }, {
-   id: 'nahs75a5sg',
-   name: 'Fourth Item'
+  id: 'nahs75a5sg',
+  name: 'Fourth Item',
 }, {
-    id: '667atsas',
-    name: 'Fifth Item'
- }];
+  id: '667atsas',
+  name: 'Fifth Item',
+}];
  
 let selectedItem = selectedItems => {
     // do something with selectedItems
@@ -50,23 +47,23 @@ let selectedItem = selectedItems => {
 };
 
 <MultiSelect
-    items={items}
-    uniqueKey="_id"
-    selectedItemsChange={selectedItem}
-    selectedItems={[]}
-    selectText="Pick Items (Selected)"
-    searchInputPlaceholderText="Search Items..."
-    fontFamily="ProximaNova-Regular"
-    altFontFamily="ProximaNova-Light"
-    tagRemoveIconColor="#000FFF"
-    tagBorderColor="#CCC"
-    tagTextColor="#CCC"
-    selectedItemFontFamily="ProximaNova-Semibold"
-    selectedItemTextColor="#CCC"
-    selectedItemIconColor="#CCC"
-    itemFontFamily="ProximaNova-Regular"
-    itemTextColor="#000"
-    searchInputStyle={{fontFamily: 'ProximaNova-Regular', color: '#CCC'}}  />
+  items={items}
+  uniqueKey="id"
+  selectedItemsChange={selectedItem}
+  selectedItems={[]}
+  selectText="Pick Items"
+  searchInputPlaceholderText="Search Items..."
+  altFontFamily="ProximaNova-Light"
+  tagRemoveIconColor="#CCC"
+  tagBorderColor="#CCC"
+  tagTextColor="#CCC"
+  selectedItemTextColor="#CCC"
+  selectedItemIconColor="#CCC"
+  itemTextColor="#000"
+  searchInputStyle={{ color: '#CCC' }}
+  submitButtonColor="#CCC"
+  submitButtonText="Submit"
+/>
     
 ```
 
@@ -94,6 +91,8 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `selectedItems
 | itemFontFamily | No   | Font family for each non-selected item in multi-select drop-down |
 | itemTextColor | No   |  Text color for each non-selected item in multi-select drop-down |
 | searchInputStyle | No   | Style object for multi-select input element  |
+| submitButtonColor | No   | Background color for submit button  |
+| submitButtonText | No   | Text displayed on submit button  |
 
 
 ### Removing all selected items

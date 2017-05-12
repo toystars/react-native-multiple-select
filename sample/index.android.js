@@ -58,8 +58,8 @@ export default class sample extends Component {
           selectedItemIconColor="#CCC"
           itemTextColor="#000"
           searchInputStyle={{ color: '#CCC' }}
-          submitButtonColor="red"
-          submitButtonText="Accept"
+          submitButtonColor="#CCC"
+          submitButtonText="Submit"
         />
       </View>
     );
