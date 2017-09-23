@@ -4,7 +4,7 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React from 'react';
 import {
   AppRegistry,
   StyleSheet,
@@ -35,41 +35,11 @@ const selectedItem = (selectedItems) => {
   console.log('Selected Items: ', selectedItems);
 };
 
-export default class sample extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          MultiSelect Sample
-        </Text>
-
-        <MultiSelect
-          items={items}
-          uniqueKey="id"
-          selectedItemsChange={selectedItem}
-          selectedItems={[]}
-          selectText="Pick Items"
-          searchInputPlaceholderText="Search Items..."
-          altFontFamily="ProximaNova-Light"
-          tagRemoveIconColor="#CCC"
-          tagBorderColor="#CCC"
-          tagTextColor="#CCC"
-          selectedItemTextColor="#CCC"
-          selectedItemIconColor="#CCC"
-          itemTextColor="#000"
-          searchInputStyle={{ color: '#CCC' }}
-          submitButtonColor="#CCC"
-          submitButtonText="Submit"
-        />
-      </View>
-    );
-  }
-}
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#F5FCFF',
+    padding: 10,
   },
   welcome: {
     fontSize: 20,
@@ -83,4 +53,30 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('sample', () => sample);
+const Sample = () => (
+  <View style={styles.container}>
+    <Text style={styles.welcome}>
+      MultiSelect Sample
+    </Text>
+
+    <MultiSelect
+      items={items}
+      uniqueKey="id"
+      selectedItemsChange={selectedItem}
+      selectedItems={[]}
+      selectText="Pick Items"
+      searchInputPlaceholderText="Search Items..."
+      tagRemoveIconColor="#CCC"
+      tagBorderColor="#CCC"
+      tagTextColor="#CCC"
+      selectedItemTextColor="#CCC"
+      selectedItemIconColor="#CCC"
+      itemTextColor="#000"
+      searchInputStyle={{ color: '#CCC' }}
+      submitButtonColor="#CCC"
+      submitButtonText="Submit"
+    />
+  </View>
+);
+
+AppRegistry.registerComponent('sample', () => Sample);
