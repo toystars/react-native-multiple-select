@@ -81,26 +81,26 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `selectedItems
 
 | Prop        | Required   | Purpose  |
 | ------------- |-------------| -----|
-| items      | Yes | List of items to display in the multi-select component. JavaScript Array of objects. Each object must contain a name and unique identifier (Check sample above) |
-| uniqueKey      | Yes      |   Unique identifier that is part of each item's properties. Used internally as means of identifying each item (Check sample below) |
-| single | No     | Toggles select component between single option and multi option |
-| selectedItemsChange | Yes      |JavaScript function passed in as an argument. The function is to be defined with an argument (selectedItems). The function is called whenever items are added or removed in the component. (Check sample above) |
-|selectedItems | No      | List of selected items. JavaScript Array of objects that is part of the items (check above), that cna be instantiated with the component |
-| selectText | No     | Text displayed in main component |
-| searchInputPlaceholderText | No      | Placeholder text displayed in multi-select filter input |
-| fontFamily | No     | Custom font family to be used in component (affects all text except `searchInputPlaceholderText` described above) |
-| altFontFamily | No      | Font family for `searchInputPlaceholderText` |
-| tagRemoveIconColor | No      | Color to be used for the remove icon in selected items list |
-| tagBorderColor | No      | Border color for each selected item  |
-| tagTextColor | No  | Text color for selected items list |
-| selectedItemFontFamily | No   | Font family for each selected item in multi-select drop-down |
-| selectedItemTextColor | No   |  Text color for each selected item in multi-select drop-down |
-| selectedItemIconColor | No     | Color for `selected` check icon for each selected item in multi-select drop-down |
-| itemFontFamily | No   | Font family for each non-selected item in multi-select drop-down |
-| itemTextColor | No   |  Text color for each non-selected item in multi-select drop-down |
-| searchInputStyle | No   | Style object for multi-select input element  |
-| submitButtonColor | No   | Background color for submit button  |
-| submitButtonText | No   | Text displayed on submit button  |
+| items      | Yes | (Array) List of items to display in the multi-select component. JavaScript Array of objects. Each object must contain a name and unique identifier (Check sample above) |
+| uniqueKey      | Yes      | (String) Unique identifier that is part of each item's properties. Used internally as means of identifying each item (Check sample below) |
+| single | No     | (Boolean) Toggles select component between single option and multi option |
+| selectedItemsChange | Yes      | (Function) JavaScript function passed in as an argument. The function is to be defined with an argument (selectedItems). Triggered when `Submit` button is clicked (for multi select) or item is clicked (for single select). (Check sample above) |
+|selectedItems | No      | (Array) List of selected items. JavaScript Array of objects that is part of the items (check above), that cna be instantiated with the component |
+| selectText | No     | (String) Text displayed in main component |
+| searchInputPlaceholderText | No      | (String) Placeholder text displayed in multi-select filter input |
+| fontFamily | No     | (String) Custom font family to be used in component (affects all text except `searchInputPlaceholderText` described above) |
+| altFontFamily | No      | (String) Font family for `searchInputPlaceholderText` |
+| tagRemoveIconColor | No      | (String) Color to be used for the remove icon in selected items list |
+| tagBorderColor | No      | (String) Border color for each selected item  |
+| tagTextColor | No  | (String) Text color for selected items list |
+| selectedItemFontFamily | No   | (String) Font family for each selected item in multi-select drop-down |
+| selectedItemTextColor | No   | (String) Text color for each selected item in multi-select drop-down |
+| selectedItemIconColor | No     | (String) Color for `selected` check icon for each selected item in multi-select drop-down |
+| itemFontFamily | No   | (String) Font family for each non-selected item in multi-select drop-down |
+| itemTextColor | No   | (String) Text color for each non-selected item in multi-select drop-down |
+| searchInputStyle | No   | (Object) Style object for multi-select input element  |
+| submitButtonColor | No   | (String) Background color for submit button  |
+| submitButtonText | No   | (String) Text displayed on submit button  |
 
 ## Note
 
