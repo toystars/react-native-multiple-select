@@ -5,9 +5,7 @@
 > Simple multi-select component for react-native (Select2 for react-native).
 
 
-## Screenshots
-<img width="350" alt="screen shot 2017-05-13 at 12 04 57 am" src="https://cloud.githubusercontent.com/assets/16062709/26019755/df6cbf96-376f-11e7-84e4-e28677425563.png">  <img width="350" alt="screen shot 2017-05-13 at 12 03 53 am" src="https://cloud.githubusercontent.com/assets/16062709/26019739/b96373ee-376f-11e7-91d8-505dad416415.png">  <img width="350" alt="screen shot 2017-05-13 at 12 00 05 am" src="https://cloud.githubusercontent.com/assets/16062709/26019710/7735a636-376f-11e7-97b3-4c752316ffa5.png">  <img width="350" alt="screen shot 2017-05-13 at 12 00 25 am" src="https://cloud.githubusercontent.com/assets/16062709/26019708/773377bc-376f-11e7-92f1-6a64948db1ff.png">  <img width="350" alt="screen shot 2017-05-13 at 12 00 41 am" src="https://cloud.githubusercontent.com/assets/16062709/26019709/77357206-376f-11e7-91a5-06578172202d.png">  <img width="350" alt="screen shot 2017-05-13 at 12 02 46 am" src="https://cloud.githubusercontent.com/assets/16062709/26019722/8e31a146-376f-11e7-8d80-056a5b7d0887.png">
-
+![double](https://user-images.githubusercontent.com/16062709/30774541-2be80900-a07c-11e7-802e-f07df7ebe3d6.gif)  ![single](https://user-images.githubusercontent.com/16062709/30774542-2be88920-a07c-11e7-8b0d-835ab379ae2f.gif)
 
 
 ## Installation
@@ -55,6 +53,7 @@ let selectedItem = selectedItems => {
 };
 
 <MultiSelect
+  single
   items={items}
   uniqueKey="id"
   selectedItemsChange={selectedItem}
@@ -84,6 +83,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `selectedItems
 | ------------- |-------------| -----|
 | items      | Yes | List of items to display in the multi-select component. JavaScript Array of objects. Each object must contain a name and unique identifier (Check sample above) |
 | uniqueKey      | Yes      |   Unique identifier that is part of each item's properties. Used internally as means of identifying each item (Check sample below) |
+| single | No     | Toggles select component between single option and multi option |
 | selectedItemsChange | Yes      |JavaScript function passed in as an argument. The function is to be defined with an argument (selectedItems). The function is called whenever items are added or removed in the component. (Check sample above) |
 |selectedItems | No      | List of selected items. JavaScript Array of objects that is part of the items (check above), that cna be instantiated with the component |
 | selectText | No     | Text displayed in main component |
@@ -102,6 +102,11 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `selectedItems
 | submitButtonColor | No   | Background color for submit button  |
 | submitButtonText | No   | Text displayed on submit button  |
 
+## Note
+
+- When using the `single` prop, `selectedItems` should still be passed in as an array of selected object. Also, when an item is selected in the single mode, the selected item is returned as an array of object.
+
+- The `items` props must be passed as an array of objects with a compulsory `name` key present in each object as the name key is used to display the items in the options component.
 
 ### Removing all selected items
 
