@@ -4,8 +4,8 @@
 
 > Simple multi-select component for react-native (Select2 for react-native).
 
+![double animate search](https://user-images.githubusercontent.com/16062709/30780683-cfc1488e-a108-11e7-9429-ca92d680b078.gif)  ![double](https://user-images.githubusercontent.com/16062709/30780684-cfcb3eca-a108-11e7-877c-80620ab8b2bb.gif)  ![single](https://user-images.githubusercontent.com/16062709/30780685-cfd619f8-a108-11e7-88ee-9f337ac2c131.gif)
 
-![double](https://user-images.githubusercontent.com/16062709/30774541-2be80900-a07c-11e7-802e-f07df7ebe3d6.gif)  ![single](https://user-images.githubusercontent.com/16062709/30774542-2be88920-a07c-11e7-8b0d-835ab379ae2f.gif)
 
 
 ## Installation
@@ -53,7 +53,7 @@ let selectedItem = selectedItems => {
 };
 
 <MultiSelect
-  single
+  animate
   items={items}
   uniqueKey="id"
   selectedItemsChange={selectedItem}
@@ -84,6 +84,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `selectedItems
 | items      | Yes | (Array) List of items to display in the multi-select component. JavaScript Array of objects. Each object must contain a name and unique identifier (Check sample above) |
 | uniqueKey      | Yes      | (String) Unique identifier that is part of each item's properties. Used internally as means of identifying each item (Check sample below) |
 | single | No     | (Boolean) Toggles select component between single option and multi option |
+| animate | No     | (Boolean) Adds animation to select dropdown |
 | selectedItemsChange | Yes      | (Function) JavaScript function passed in as an argument. The function is to be defined with an argument (selectedItems). Triggered when `Submit` button is clicked (for multi select) or item is clicked (for single select). (Check sample above) |
 |selectedItems | No      | (Array) List of selected items. JavaScript Array of objects that is part of the items (check above), that cna be instantiated with the component |
 | selectText | No     | (String) Text displayed in main component |
