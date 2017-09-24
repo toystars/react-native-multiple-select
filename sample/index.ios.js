@@ -18,16 +18,28 @@ const items = [{
   name: 'Ondo',
 }, {
   id: 'a0s0a8ssbsd',
-  name: 'C2G',
+  name: 'Ogun',
 }, {
   id: '16hbajsabsd',
   name: 'Calabar',
 }, {
   id: 'nahs75a5sg',
-  name: 'Fourth Item',
+  name: 'Lagos',
 }, {
   id: '667atsas',
-  name: 'Fifth Item',
+  name: 'Maiduguri',
+}, {
+  id: 'hsyasajs',
+  name: 'Anambra',
+}, {
+  id: 'djsjudksjd',
+  name: 'Benue',
+}, {
+  id: 'sdhyaysdj',
+  name: 'Kaduna',
+}, {
+  id: 'suudydjsjd',
+  name: 'Abuja',
 }];
 
 const selectedItem = (selectedItems) => {
@@ -44,7 +56,7 @@ const styles = StyleSheet.create({
   welcome: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
+    margin: 100,
   },
   instructions: {
     textAlign: 'center',
@@ -60,6 +72,7 @@ const Sample = () => (
     </Text>
 
     <MultiSelect
+      animate
       items={items}
       uniqueKey="id"
       selectedItemsChange={selectedItem}
