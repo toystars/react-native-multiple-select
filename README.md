@@ -95,6 +95,8 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `selectedItems
 | ------------- |-------------| -----|
 | items      | Yes | (Array) List of items to display in the multi-select component. JavaScript Array of objects. Each object must contain a name and unique identifier (Check sample above) |
 | uniqueKey      | Yes      | (String) Unique identifier that is part of each item's properties. Used internally as means of identifying each item (Check sample below) |
+| textColor | No     | (String) Color for selected item name displayed as label for multiselect  |
+| fontSize | No     | (Number) Font size for selected item name displayed as label for multiselect |
 | single | No     | (Boolean) Toggles select component between single option and multi option |
 | animate | No     | (Boolean) Adds animation to select dropdown |
 | selectedItemsChange | Yes      | (Function) JavaScript function passed in as an argument. The function is to be defined with an argument (selectedItems). Triggered when `Submit` button is clicked (for multi select) or item is clicked (for single select). (Check sample above) |
