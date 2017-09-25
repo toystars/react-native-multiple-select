@@ -99,7 +99,6 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `selectedItems
 | fontSize | No     | (Number) Font size for selected item name displayed as label for multiselect |
 | fixedHeight | No     | (Boolean) Defaults to false. Specifies if select dropdown take height of content or a fixed height with a scrollBar (There is an issue with this behavior when component is nested in a ScrollView in which scroll event will only be dispatched to parent ScrollView and select component won't be scrollable). See [this issue](https://github.com/toystars/react-native-multiple-select/issues/12) for more info. |
 | single | No     | (Boolean) Toggles select component between single option and multi option |
-| animate | No     | (Boolean) Adds animation to select dropdown |
 | selectedItemsChange | Yes      | (Function) JavaScript function passed in as an argument. The function is to be defined with an argument (selectedItems). Triggered when `Submit` button is clicked (for multi select) or item is clicked (for single select). (Check sample above) |
 |selectedItems | No      | (Array) List of selected items. JavaScript Array of objects that is part of the items (check above), that cna be instantiated with the component |
 | selectText | No     | (String) Text displayed in main component |
