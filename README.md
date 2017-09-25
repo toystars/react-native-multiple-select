@@ -4,7 +4,7 @@
 
 > Simple multi-select component for react-native (Select2 for react-native).
 
-![double animate search](https://user-images.githubusercontent.com/16062709/30780683-cfc1488e-a108-11e7-9429-ca92d680b078.gif)  ![double](https://user-images.githubusercontent.com/16062709/30780684-cfcb3eca-a108-11e7-877c-80620ab8b2bb.gif)  ![single](https://user-images.githubusercontent.com/16062709/30780685-cfd619f8-a108-11e7-88ee-9f337ac2c131.gif)
+![multiple](https://user-images.githubusercontent.com/16062709/30819847-0907dd1e-a218-11e7-9980-e70b2d8e7953.gif)  ![single](https://user-images.githubusercontent.com/16062709/30819849-095d6144-a218-11e7-85b9-4e2b96f9ead9.gif)
 
 
 
@@ -22,6 +22,8 @@ $ yarn add react-native-multiple-select
 
 ## Usage
 Note: Ensure to add and configure [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) to your project before using this package.
+
+You can clone and try out the [sample](https://github.com/toystars/RN-multiple-select-sample) app.
 
 The snippet below shows how the component can be used
 
@@ -65,7 +67,6 @@ let selectedItem = selectedItems => {
 };
 
 <MultiSelect
-  animate
   items={items}
   uniqueKey="id"
   selectedItemsChange={selectedItem}
