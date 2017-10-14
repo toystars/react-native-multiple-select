@@ -129,6 +129,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `selectedItems
 | itemFontFamily | No   | (String) Font family for each non-selected item in multi-select drop-down |
 | itemTextColor | No   | (String) Text color for each non-selected item in multi-select drop-down |
 | searchInputStyle | No   | (Object) Style object for multi-select input element  |
+| hideSubmitButton | No | (Boolean) Defaults to false. Hide submit button from dropdown, and rather use arrow-button in search field"
 | submitButtonColor | No   | (String) Background color for submit button  |
 | submitButtonText | No   | (String) Text displayed on submit button  |
 
