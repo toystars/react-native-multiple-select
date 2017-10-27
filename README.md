@@ -76,26 +76,34 @@ class MultiSelectExample extends Component {
   };
 
   render() {
-    <View style={{ flex: 1 }}>
-      <MultiSelect
-        items={items}
-        uniqueKey="id"
-        onSelectedItemsChange={this.onSelectedItemsChange}
-        selectedItems={this.state.selectedItems}
-        selectText="Pick Items"
-        searchInputPlaceholderText="Search Items..."
-        altFontFamily="ProximaNova-Light"
-        tagRemoveIconColor="#CCC"
-        tagBorderColor="#CCC"
-        tagTextColor="#CCC"
-        selectedItemTextColor="#CCC"
-        selectedItemIconColor="#CCC"
-        itemTextColor="#000"
-        searchInputStyle={{ color: '#CCC' }}
-        submitButtonColor="#CCC"
-        submitButtonText="Submit"
-      />
-    </View>
+    const { selectedItems } = this.state;
+    return (
+      <View style={{ flex: 1 }}>
+        <MultiSelect
+          hideTags
+          items={items}
+          uniqueKey="id"
+          ref={(component) => { this.multiSelect = component }}
+          onSelectedItemsChange={this.onSelectedItemsChange}
+          selectedItems={selectedItems}
+          selectText="Pick Items"
+          searchInputPlaceholderText="Search Items..."
+          altFontFamily="ProximaNova-Light"
+          tagRemoveIconColor="#CCC"
+          tagBorderColor="#CCC"
+          tagTextColor="#CCC"
+          selectedItemTextColor="#CCC"
+          selectedItemIconColor="#CCC"
+          itemTextColor="#000"
+          searchInputStyle={{ color: '#CCC' }}
+          submitButtonColor="#CCC"
+          submitButtonText="Submit"
+        />
+        <View>
+          {this.multiSelect.getSelectedItemsExt(selectedItems)}
+        </View>
+      </View>
+    );
   }
 }
     
@@ -129,11 +137,16 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `selectedItems
 | itemFontFamily | No   | (String) Font family for each non-selected item in multi-select drop-down |
 | itemTextColor | No   | (String) Text color for each non-selected item in multi-select drop-down |
 | searchInputStyle | No   | (Object) Style object for multi-select input element  |
-| hideSubmitButton | No | (Boolean) Defaults to false. Hide submit button from dropdown, and rather use arrow-button in search field"
+| hideSubmitButton | No | (Boolean) Defaults to false. Hide submit button from dropdown, and rather use arrow-button in search field |
+| hideTags | No | (Boolean) Defaults to false. Hide tokenized selected items, in case selected items are to be shown somewhere else in view (check below for more info) |
 | submitButtonColor | No   | (String) Background color for submit button  |
 | submitButtonText | No   | (String) Text displayed on submit button  |
 
 ## Note
+
+- Tokenized selected items can be displayed in any other part of the view by adding a `ref` to the `MultiSelect` component like so `ref={(component) => { this.multiSelect = component }}`. Then add this to any part of the screen you want the tokens to show up: `this.multiSelect.getSelectedItemsExt(selectedItems)`. The `selectedItems` argument passed into the above mentioned method is the same `selectedItems` passed as the main component selected items prop. (See example above).
+
+- If users shouldn't be able to select any of the items in the dropdown list, set a `disabled` key to true in the item. Such item will be rendered in gray and won't be clickable.
 
 - When using the `single` prop, `selectedItems` should still be passed in as an array of selected items keys. Also, when an item is selected in the single mode, the selected item is returned as an array of string.
 
@@ -180,9 +193,11 @@ Contributions are accepted via Pull Requests on [Github](https://github.com/toys
 
 Check issues for current issues.
 
-## Author
+## Contributors
 
 [Mustapha Babatunde](https://twitter.com/iAmToystars)
+[PWoltman](https://github.com/pwoltman)
+[mikaello](https://github.com/mikaello)
  
 
 ## License
