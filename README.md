@@ -33,8 +33,6 @@ The snippet below shows how the component can be used
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import MultiSelect from 'react-native-multiple-select';
- 
-let 
 
 class MultiSelectExample extends Component {
 
