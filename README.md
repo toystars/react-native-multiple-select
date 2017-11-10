@@ -107,7 +107,7 @@ class MultiSelectExample extends Component {
     
 ```
 
-The component takes 3 compulsory props - `items`, `uniqueKey` and `selectedItemsChange`. Other props are optional. The table below explains more.
+The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedItemsChange`. Other props are optional. The table below explains more.
 
 
 ## Props
