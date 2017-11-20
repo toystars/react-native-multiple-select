@@ -8,6 +8,7 @@
   "rules": {
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
     "no-trailing-spaces": "off",
+    "quotes": [2, "double"],
     "no-useless-escape": "off",
     "react/forbid-prop-types": 0,
     "no-underscore-dangle": "off"
