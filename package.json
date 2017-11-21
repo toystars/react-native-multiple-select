@@ -12,10 +12,7 @@
     "preset": "jest-react-native"
   },
   "lint-staged": {
-    "**/*.{js,json,css}": [
-      "./node_modules/prettier/bin --single-quote --write ",
-      "git add"
-    ]
+    "**/*.js": ["prettier --single-quote --write ", "git add"]
   },
   "repository": {
     "type": "git",
