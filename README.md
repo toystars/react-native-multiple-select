@@ -104,7 +104,7 @@ class MultiSelectExample extends Component {
     );
   }
 }
-    
+
 ```
 
 The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedItemsChange`. Other props are optional. The table below explains more.
@@ -122,6 +122,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | fixedHeight | No     | (Boolean) Defaults to false. Specifies if select dropdown take height of content or a fixed height with a scrollBar (There is an issue with this behavior when component is nested in a ScrollView in which scroll event will only be dispatched to parent ScrollView and select component won't be scrollable). See [this issue](https://github.com/toystars/react-native-multiple-select/issues/12) for more info. |
 | single | No     | (Boolean) Toggles select component between single option and multi option |
 | onSelectedItemsChange | Yes      | (Function) JavaScript function passed in as an argument. The function is to be defined with an argument (selectedItems). Triggered when `Submit` button is clicked (for multi select) or item is clicked (for single select). (Check sample above) |
+| onChangeInput | No   | (Function) JavaScript function passed in as an argument. The function is called everythime `TextInput` is changed with the value. |
 | selectText | No     | (String) Text displayed in main component |
 | searchInputPlaceholderText | No      | (String) Placeholder text displayed in multi-select filter input |
 | fontFamily | No     | (String) Custom font family to be used in component (affects all text except `searchInputPlaceholderText` described above) |
@@ -163,8 +164,8 @@ To use, add ref to MultiSelect component in parent component, then call method a
 clearSelectedCategories = () => {
    this._multiSelect.removeAllItems();
 };
-    
-``` 
+
+```
 
 
 ## Contributing
@@ -198,7 +199,7 @@ Check issues for current issues.
 [PWoltman](https://github.com/pwoltman)
 
 [mikaello](https://github.com/mikaello)
- 
+
 
 ## License
 
