@@ -12,21 +12,13 @@
     "preset": "jest-react-native"
   },
   "lint-staged": {
-    "*.{js,json,css}": [
-      "prettier --single-quote --write ",
-      "git add"
-    ]
+    "**/*.{js,json,css}": ["prettier --single-quote --write ", "git add"]
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/toystars/react-native-multiple-select.git"
   },
-  "keywords": [
-    "reactnative",
-    "multiselect",
-    "multi-select",
-    "react-native"
-  ],
+  "keywords": ["reactnative", "multiselect", "multi-select", "react-native"],
   "author": "Mustapha Babatunde Oluwaleke",
   "license": "MIT",
   "bugs": {
