@@ -1,14 +1,18 @@
 {
   "name": "react-native-multiple-select",
-  "version": "0.3.1",
+  "version": "0.3.3",
   "description": "Simple multi-select component for react-native",
   "main": "index.js",
   "scripts": {
+    "precommit": "lint-staged",
     "test": "jest",
     "lint": "eslint lib/"
   },
   "jest": {
     "preset": "jest-react-native"
+  },
+  "lint-staged": {
+    "*.{js,json,css}": ["prettier --single-quote --write", "git add"]
   },
   "repository": {
     "type": "git",
@@ -31,8 +35,11 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.9.0",
+    "husky": "^0.14.3",
     "jest": "^18.1.0",
     "jest-react-native": "^18.0.0",
+    "lint-staged": "^5.0.0",
+    "prettier": "^1.8.2",
     "react-test-renderer": "^15.4.2",
     "remote-redux-devtools": "^0.5.7"
   },

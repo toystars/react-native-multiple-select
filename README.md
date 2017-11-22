@@ -86,6 +86,7 @@ class MultiSelectExample extends Component {
           selectedItems={selectedItems}
           selectText="Pick Items"
           searchInputPlaceholderText="Search Items..."
+          onChangeInput={ (text)=> console.log(text)}
           altFontFamily="ProximaNova-Light"
           tagRemoveIconColor="#CCC"
           tagBorderColor="#CCC"
@@ -124,6 +125,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | single | No     | (Boolean) Toggles select component between single option and multi option |
 | displayKey | No | (String) Defaults to "name". This string will be used to select the key to display the objects in the items array |
 | onSelectedItemsChange | Yes      | (Function) JavaScript function passed in as an argument. The function is to be defined with an argument (selectedItems). Triggered when `Submit` button is clicked (for multi select) or item is clicked (for single select). (Check sample above) |
+| onChangeInput | No   | (Function) JavaScript function passed in as an argument. The function is called everythime `TextInput` is changed with the value. |
 | selectText | No     | (String) Text displayed in main component |
 | searchInputPlaceholderText | No      | (String) Placeholder text displayed in multi-select filter input |
 | fontFamily | No     | (String) Custom font family to be used in component (affects all text except `searchInputPlaceholderText` described above) |
