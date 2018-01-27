@@ -119,33 +119,35 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 
 | Prop        | Required   | Purpose  |
 | ------------- |-------------| -----|
-| items      | Yes | (Array, control prop) List of items to display in the multi-select component. JavaScript Array of objects. Each object must contain a name and unique identifier (Check sample above) |
-|selectedItems | No      | (Array, control prop) List of selected items keys . JavaScript Array of strings, that can be instantiated with the component |
-| uniqueKey      | Yes      | (String) Unique identifier that is part of each item's properties. Used internally as means of identifying each item (Check sample below) |
-| textColor | No     | (String) Color for selected item name displayed as label for multiselect  |
-| fontSize | No     | (Number) Font size for selected item name displayed as label for multiselect |
-| fixedHeight | No     | (Boolean) Defaults to false. Specifies if select dropdown take height of content or a fixed height with a scrollBar (There is an issue with this behavior when component is nested in a ScrollView in which scroll event will only be dispatched to parent ScrollView and select component won't be scrollable). See [this issue](https://github.com/toystars/react-native-multiple-select/issues/12) for more info. |
-| single | No     | (Boolean) Toggles select component between single option and multi option |
-| displayKey | No | (String) Defaults to "name". This string will be used to select the key to display the objects in the items array |
-| onSelectedItemsChange | Yes      | (Function) JavaScript function passed in as an argument. The function is to be defined with an argument (selectedItems). Triggered when `Submit` button is clicked (for multi select) or item is clicked (for single select). (Check sample above) |
-| onChangeInput | No   | (Function) JavaScript function passed in as an argument. The function is called everythime `TextInput` is changed with the value. |
-| selectText | No     | (String) Text displayed in main component |
-| searchInputPlaceholderText | No      | (String) Placeholder text displayed in multi-select filter input |
-| fontFamily | No     | (String) Custom font family to be used in component (affects all text except `searchInputPlaceholderText` described above) |
 | altFontFamily | No      | (String) Font family for `searchInputPlaceholderText` |
-| tagRemoveIconColor | No      | (String) Color to be used for the remove icon in selected items list |
-| tagBorderColor | No      | (String) Border color for each selected item  |
-| tagTextColor | No  | (String) Text color for selected items list |
-| selectedItemFontFamily | No   | (String) Font family for each selected item in multi-select drop-down |
-| selectedItemTextColor | No   | (String) Text color for each selected item in multi-select drop-down |
-| selectedItemIconColor | No     | (String) Color for `selected` check icon for each selected item in multi-select drop-down |
-| itemFontFamily | No   | (String) Font family for each non-selected item in multi-select drop-down |
-| itemTextColor | No   | (String) Text color for each non-selected item in multi-select drop-down |
-| searchInputStyle | No   | (Object) Style object for multi-select input element  |
+| canAddItems | No      | (Boolean) Defaults to "false". This allows a user to add items to the list of items provided. You need to handle adding the new items in the onAddItem function prop. Items may be added with the return key on the native keyboard. |
+| displayKey | No | (String) Defaults to "name". This string will be used to select the key to display the objects in the items array |
+| fixedHeight | No     | (Boolean) Defaults to false. Specifies if select dropdown take height of content or a fixed height with a scrollBar (There is an issue with this behavior when component is nested in a ScrollView in which scroll event will only be dispatched to parent ScrollView and select component won't be scrollable). See [this issue](https://github.com/toystars/react-native-multiple-select/issues/12) for more info. |
+| fontFamily | No     | (String) Custom font family to be used in component (affects all text except `searchInputPlaceholderText` described above) |
+| fontSize | No     | (Number) Font size for selected item name displayed as label for multiselect |
 | hideSubmitButton | No | (Boolean) Defaults to false. Hide submit button from dropdown, and rather use arrow-button in search field |
 | hideTags | No | (Boolean) Defaults to false. Hide tokenized selected items, in case selected items are to be shown somewhere else in view (check below for more info) |
+| itemFontFamily | No   | (String) Font family for each non-selected item in multi-select drop-down |
+| itemTextColor | No   | (String) Text color for each non-selected item in multi-select drop-down |
+| items      | Yes | (Array, control prop) List of items to display in the multi-select component. JavaScript Array of objects. Each object must contain a name and unique identifier (Check sample above) |
+| onAddItem | No   | (Function) JavaScript function passed in as an argument. The function is called everythime a new item is added, and receives the entire list of items. Here you should ensure that the new items are added to your provided list of `items` in addition to any other consequences of new items being added. |
+| onChangeInput | No   | (Function) JavaScript function passed in as an argument. The function is called everythime `TextInput` is changed with the value. |
+| onSelectedItemsChange | Yes      | (Function) JavaScript function passed in as an argument. The function is to be defined with an argument (selectedItems). Triggered when `Submit` button is clicked (for multi select) or item is clicked (for single select). (Check sample above) |
+| searchInputPlaceholderText | No      | (String) Placeholder text displayed in multi-select filter input |
+| searchInputStyle | No   | (Object) Style object for multi-select input element  |
+| selectText | No     | (String) Text displayed in main component |
+| selectedItemFontFamily | No   | (String) Font family for each selected item in multi-select drop-down |
+| selectedItemIconColor | No     | (String) Color for `selected` check icon for each selected item in multi-select drop-down |
+| selectedItemTextColor | No   | (String) Text color for each selected item in multi-select drop-down |
+| single | No     | (Boolean) Toggles select component between single option and multi option |
 | submitButtonColor | No   | (String) Background color for submit button  |
 | submitButtonText | No   | (String) Text displayed on submit button  |
+| tagBorderColor | No      | (String) Border color for each selected item  |
+| tagRemoveIconColor | No      | (String) Color to be used for the remove icon in selected items list |
+| tagTextColor | No  | (String) Text color for selected items list |
+| textColor | No     | (String) Color for selected item name displayed as label for multiselect  |
+| uniqueKey      | Yes      | (String) Unique identifier that is part of each item's properties. Used internally as means of identifying each item (Check sample below) |
+|selectedItems | No      | (Array, control prop) List of selected items keys . JavaScript Array of strings, that can be instantiated with the component |
 
 ## Note
 
