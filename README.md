@@ -202,11 +202,7 @@ Check issues for current issues.
 
 ## Contributors
 
-[Mustapha Babatunde](https://twitter.com/iAmToystars)
-
-[PWoltman](https://github.com/pwoltman)
-
-[mikaello](https://github.com/mikaello)
+Here is list of [CONTRIBUTORS](CONTRIBUTORS.md)
 
 
 ## License
