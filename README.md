@@ -128,6 +128,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | hideSubmitButton | No | (Boolean) Defaults to false. Hide submit button from dropdown, and rather use arrow-button in search field |
 | hideTags | No | (Boolean) Defaults to false. Hide tokenized selected items, in case selected items are to be shown somewhere else in view (check below for more info) |
 | itemFontFamily | No   | (String) Font family for each non-selected item in multi-select drop-down |
+| itemFontSize | No   | (Number) Font size used for each item in the multi-select drop-down |
 | itemTextColor | No   | (String) Text color for each non-selected item in multi-select drop-down |
 | items      | Yes | (Array, control prop) List of items to display in the multi-select component. JavaScript Array of objects. Each object must contain a name and unique identifier (Check sample above) |
 | onAddItem | No   | (Function) JavaScript function passed in as an argument. The function is called everythime a new item is added, and receives the entire list of items. Here you should ensure that the new items are added to your provided list of `items` in addition to any other consequences of new items being added. |
