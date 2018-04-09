@@ -126,6 +126,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | fontFamily | No     | (String) Custom font family to be used in component (affects all text except `searchInputPlaceholderText` described above) |
 | fontSize | No     | (Number) Font size for selected item name displayed as label for multiselect |
 | hideSubmitButton | No | (Boolean) Defaults to false. Hide submit button from dropdown, and rather use arrow-button in search field |
+| autoFocusInput | No | (Boolean) Defaults to true. Auto focus on the search input when MultiSelect launches. |
 | hideTags | No | (Boolean) Defaults to false. Hide tokenized selected items, in case selected items are to be shown somewhere else in view (check below for more info) |
 | itemFontFamily | No   | (String) Font family for each non-selected item in multi-select drop-down |
 | itemTextColor | No   | (String) Text color for each non-selected item in multi-select drop-down |
