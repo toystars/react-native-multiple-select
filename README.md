@@ -172,7 +172,7 @@ To use, add ref to MultiSelect component in parent component, then call method a
 />
 
 clearSelectedCategories = () => {
-   this._multiSelect.removeAllItems();
+   this._multiSelect._removeAllItems();
 };
 
 ```
