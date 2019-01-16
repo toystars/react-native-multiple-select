@@ -10,7 +10,6 @@
 ## Important notice
 I've been super busy with work and other projects lately that I really don't have enough time to dedicate to this project. If you would like to maintain this project, you can drop me an [email](mailto:toystars2008@gmail.com). Thanks.
 
-
 ## Installation
 
 ``` bash
@@ -126,7 +125,6 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | fontFamily | No     | (String) Custom font family to be used in component (affects all text except `searchInputPlaceholderText` described above) |
 | fontSize | No     | (Number) Font size for selected item name displayed as label for multiselect |
 | hideSubmitButton | No | (Boolean) Defaults to false. Hide submit button from dropdown, and rather use arrow-button in search field |
-| autoFocusInput | No | (Boolean) Defaults to true. Auto focus on the search input when MultiSelect launches. |
 | hideTags | No | (Boolean) Defaults to false. Hide tokenized selected items, in case selected items are to be shown somewhere else in view (check below for more info) |
 | itemFontFamily | No   | (String) Font family for each non-selected item in multi-select drop-down |
 | itemFontSize | No   | (Number) Font size used for each item in the multi-select drop-down |
@@ -142,12 +140,16 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | selectedItemIconColor | No     | (String) Color for `selected` check icon for each selected item in multi-select drop-down |
 | selectedItemTextColor | No   | (String) Text color for each selected item in multi-select drop-down |
 | single | No     | (Boolean) Toggles select component between single option and multi option |
+| styleDropdownMenu | No | (Style) Style the view of the dropdown menu |
+| styleDropdownMenuSubsection | No | (Style) Style the inner view of the dropdown menu |
+| styleMainWrapper | No | (Style) Style the Main Container of the MultiSelector |
 | submitButtonColor | No   | (String) Background color for submit button  |
 | submitButtonText | No   | (String) Text displayed on submit button  |
 | tagBorderColor | No      | (String) Border color for each selected item  |
 | tagRemoveIconColor | No      | (String) Color to be used for the remove icon in selected items list |
 | tagTextColor | No  | (String) Text color for selected items list |
 | textColor | No     | (String) Color for selected item name displayed as label for multiselect  |
+| textInputProps | No | (Object) Properties for the Text Input. Pass any property that is required on the text input |
 | uniqueKey      | Yes      | (String) Unique identifier that is part of each item's properties. Used internally as means of identifying each item (Check sample below) |
 |selectedItems | No      | (Array, control prop) List of selected items keys . JavaScript Array of strings, that can be instantiated with the component |
 
