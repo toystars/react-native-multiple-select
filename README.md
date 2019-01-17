@@ -122,6 +122,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | canAddItems | No      | (Boolean) Defaults to "false". This allows a user to add items to the list of items provided. You need to handle adding the new items in the onAddItem function prop. Items may be added with the return key on the native keyboard. |
 | displayKey | No | (String) Defaults to "name". This string will be used to select the key to display the objects in the items array |
 | fixedHeight | No     | (Boolean) Defaults to false. Specifies if select dropdown take height of content or a fixed height with a scrollBar (There is an issue with this behavior when component is nested in a ScrollView in which scroll event will only be dispatched to parent ScrollView and select component won't be scrollable). See [this issue](https://github.com/toystars/react-native-multiple-select/issues/12) for more info. |
+| flatListProps | No | (Object) Properties for the FlatList. Pass any property that is required on the FlatList of the dropdown menu |
 | fontFamily | No     | (String) Custom font family to be used in component (affects all text except `searchInputPlaceholderText` described above) |
 | fontSize | No     | (Number) Font size for selected item name displayed as label for multiselect |
 | hideSubmitButton | No | (Boolean) Defaults to false. Hide submit button from dropdown, and rather use arrow-button in search field |
@@ -142,6 +143,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | single | No     | (Boolean) Toggles select component between single option and multi option |
 | styleDropdownMenu | No | (Style) Style the view of the dropdown menu |
 | styleDropdownMenuSubsection | No | (Style) Style the inner view of the dropdown menu |
+| styleInputGroup | No | (Style) Style the Container of the Text Input Group |
 | styleMainWrapper | No | (Style) Style the Main Container of the MultiSelector |
 | submitButtonColor | No   | (String) Background color for submit button  |
 | submitButtonText | No   | (String) Text displayed on submit button  |
