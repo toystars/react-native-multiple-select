@@ -145,6 +145,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | styleDropdownMenuSubsection | No | (Style) Style the inner view of the dropdown menu |
 | styleInputGroup | No | (Style) Style the Container of the Text Input Group |
 | styleMainWrapper | No | (Style) Style the Main Container of the MultiSelector |
+| styleRowList | No | (Style) Style the Row that is displayed after you |
 | submitButtonColor | No   | (String) Background color for submit button  |
 | submitButtonText | No   | (String) Text displayed on submit button  |
 | tagBorderColor | No      | (String) Border color for each selected item  |
