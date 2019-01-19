@@ -125,6 +125,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | flatListProps | No | (Object) Properties for the FlatList. Pass any property that is required on the FlatList of the dropdown menu |
 | fontFamily | No     | (String) Custom font family to be used in component (affects all text except `searchInputPlaceholderText` described above) |
 | fontSize | No     | (Number) Font size for selected item name displayed as label for multiselect |
+| hideDropdown | No | (Boolean) Defaults false. Hide dropdown menu with a cancel, and use arrow-back |
 | hideSubmitButton | No | (Boolean) Defaults to false. Hide submit button from dropdown, and rather use arrow-button in search field |
 | hideTags | No | (Boolean) Defaults to false. Hide tokenized selected items, in case selected items are to be shown somewhere else in view (check below for more info) |
 | itemFontFamily | No   | (String) Font family for each non-selected item in multi-select drop-down |
@@ -144,6 +145,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | styleDropdownMenu | No | (Style) Style the view of the dropdown menu |
 | styleDropdownMenuSubsection | No | (Style) Style the inner view of the dropdown menu |
 | styleInputGroup | No | (Style) Style the Container of the Text Input Group |
+| styleItemsContainer | No | (Style) Style the Container of the items that are displayed in a list |
 | styleMainWrapper | No | (Style) Style the Main Container of the MultiSelector |
 | styleRowList | No | (Style) Style the Row that is displayed after you |
 | submitButtonColor | No   | (String) Background color for submit button  |
