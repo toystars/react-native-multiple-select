@@ -146,7 +146,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | styleDropdownMenuSubsection | No | (Style) Style the inner view of the dropdown menu |
 | styleInputGroup | No | (Style) Style the Container of the Text Input Group |
 | styleItemsContainer | No | (Style) Style the Container of the items that are displayed in a list |
-| stylesListContainer | No | (Style) Style the Container of main list. See [this issue] (https://github.com/toystars/react-native-multiple-select/issues/12)|
+| styleListContainer | No | (Style) Style the Container of main list. See [this issue] (https://github.com/toystars/react-native-multiple-select/issues/12)|
 | styleMainWrapper | No | (Style) Style the Main Container of the MultiSelector |
 | styleRowList | No | (Style) Style the Row that is displayed after you |
 | submitButtonColor | No   | (String) Background color for submit button  |
