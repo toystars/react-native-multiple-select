@@ -149,6 +149,8 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | styleListContainer | No | (Style) Style the Container of main list. See [this issue] (https://github.com/toystars/react-native-multiple-select/issues/12)|
 | styleMainWrapper | No | (Style) Style the Main Container of the MultiSelector |
 | styleRowList | No | (Style) Style the Row that is displayed after you |
+| styleSelectorContainer | No | (Style) Style the Container of the Selector when user clicks on the dropdown|
+| styleTextDropdown | No | (Text Style) Style text of the Dropdown |
 | submitButtonColor | No   | (String) Background color for submit button  |
 | submitButtonText | No   | (String) Text displayed on submit button  |
 | tagBorderColor | No      | (String) Border color for each selected item  |
