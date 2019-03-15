@@ -152,6 +152,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | styleRowList | No | (Style) Style the Row that is displayed after you |
 | styleSelectorContainer | No | (Style) Style the Container of the Selector when user clicks on the dropdown|
 | styleTextDropdown | No | (Text Style) Style text of the Dropdown |
+| styleTextDropdownSelected | No | (Text Style) Style text of the Dropdown selected |
 | submitButtonColor | No   | (String) Background color for submit button  |
 | submitButtonText | No   | (String) Text displayed on submit button  |
 | tagBorderColor | No      | (String) Border color for each selected item  |
