@@ -122,6 +122,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | canAddItems | No      | (Boolean) Defaults to "false". This allows a user to add items to the list of items provided. You need to handle adding the new items in the onAddItem function prop. Items may be added with the return key on the native keyboard. |
 | displayKey | No | (String) Defaults to "name". This string will be used to select the key to display the objects in the items array |
 | fixedHeight | No     | (Boolean) Defaults to false. Specifies if select dropdown take height of content or a fixed height with a scrollBar (There is an issue with this behavior when component is nested in a ScrollView in which scroll event will only be dispatched to parent ScrollView and select component won't be scrollable). See [this issue](https://github.com/toystars/react-native-multiple-select/issues/12) for more info. |
+| filterMethod | No | (String) Defaults to  "partial". options: ["partial", "full"] Choose the logic on how the system filters items based on searchTerm. partial: checks all individual words and if at least one word matches will include that item. full: checks to ensure the item contains the full substring of searchterm in order minus any leading or trailing spaces.
 | flatListProps | No | (Object) Properties for the FlatList. Pass any property that is required on the FlatList of the dropdown menu |
 | fontFamily | No     | (String) Custom font family to be used in component (affects all text except `searchInputPlaceholderText` described above) |
 | fontSize | No     | (Number) Font size for selected item name displayed as label for multiselect |
@@ -172,6 +173,10 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 - When using the `single` prop, `selectedItems` should still be passed in as an array of selected items keys. Also, when an item is selected in the single mode, the selected item is returned as an array of string.
 
 - The `items` props must be passed as an array of objects with a compulsory `name` key present in each object as the name key is used to display the items in the options component.
+
+- filterMethod partial example: searchTerm = "University of New" will return "University of New York", "University of New Orleans", "The University of New York" as well as "University of Columbia" and "New England Tech" due to partial matches.
+
+- filterMethod full example: searchTerm = "University of New" will return" University of New York", "University of New Orleans", "The University of New York" because all three contain the substring "University of New"
 
 ### Removing all selected items
 
