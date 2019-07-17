@@ -33,26 +33,27 @@
     "url": "https://github.com/toystars/react-native-multiple-select/issues"
   },
   "homepage": "https://github.com/toystars/react-native-multiple-select#readme",
-  "dependencies": {},
+  "dependencies": {
+    "prop-types": "^15.7.2"
+  },
   "devDependencies": {
-    "babel-eslint": "^7.1.1",
+    "babel-eslint": "^10.0.2",
     "babel-jest": "23.6.0",
     "babel-preset-react-native": "^1.9.1",
-    "eslint": "^3.15.0",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.9.0",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
     "husky": "^0.14.3",
     "jest": "^23.3.6",
-    "jest-react-native": "^18.0.0",
     "lint-staged": "^5.0.0",
     "prettier": "^1.15.3",
     "react-test-renderer": "16.6.3",
     "remote-redux-devtools": "^0.5.16"
   },
   "peerDependencies": {
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.14",
     "react": "16.6.3",
     "react-native": "^0.57.8",
     "react-native-vector-icons": "^6.1.0"
