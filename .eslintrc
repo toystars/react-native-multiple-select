@@ -9,11 +9,12 @@
   "plugins": ["react-native"],
   "rules": {
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+    "react/require-default-props": "off",
     "no-trailing-spaces": "off",
     "no-useless-escape": "off",
     "react/forbid-prop-types": 0,
     "no-underscore-dangle": "off",
     "comma-dangle": "off",
-    "quotes": "off"
+    "quotes": "off",
   }
 }
