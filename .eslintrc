@@ -1,11 +1,12 @@
 {
-  "parser": "babel-eslint",
+  "extends": "airbnb",
   "env": {
     "es6": true,
     "node": true,
     "browser": true,
   },
-  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "plugins": ["react-native"],
   "rules": {
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
     "no-trailing-spaces": "off",
