@@ -1,8 +1,9 @@
 {
   "parser": "babel-eslint",
   "env": {
+    "es6": true,
+    "node": true,
     "browser": true,
-    "node": true
   },
   "extends": "airbnb",
   "rules": {
@@ -10,6 +11,8 @@
     "no-trailing-spaces": "off",
     "no-useless-escape": "off",
     "react/forbid-prop-types": 0,
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "comma-dangle": "off",
+    "quotes": "off"
   }
 }
