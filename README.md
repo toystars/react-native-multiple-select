@@ -25,7 +25,7 @@ $ yarn add react-native-multiple-select
 ## Usage
 Note: Ensure to add and configure [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) to your project before using this package.
 
-You can clone and try out the [sample](https://github.com/toystars/RN-multiple-select-sample) app.
+You can clone and try out the [sample](https://github.com/toystars/RN-multiple-select-sample) app or you can try [sample](https://github.com/AugustoAleGon/react-native-multiple-select-sample)
 
 The snippet below shows how the component can be used
 
@@ -134,9 +134,11 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | itemFontSize | No   | (Number) Font size used for each item in the multi-select drop-down |
 | itemTextColor | No   | (String) Text color for each non-selected item in multi-select drop-down |
 | items      | Yes | (Array, control prop) List of items to display in the multi-select component. JavaScript Array of objects. Each object must contain a name and unique identifier (Check sample above) |
-| onAddItem | No   | (Function) JavaScript function passed in as an argument. The function is called everythime a new item is added, and receives the entire list of items. Here you should ensure that the new items are added to your provided list of `items` in addition to any other consequences of new items being added. |
-| onChangeInput | No   | (Function) JavaScript function passed in as an argument. The function is called everythime `TextInput` is changed with the value. |
+| onAddItem | No   | (Function) JavaScript function passed in as an argument. The function is called everytime a new item is added, and receives the entire list of items. Here you should ensure that the new items are added to your provided list of `items` in addition to any other consequences of new items being added. |
+| onChangeInput | No    | (Function) JavaScript function passed in as an argument. The function is called everytime `TextInput` is changed with the value. |
+| onClearSelector | No | (Function) JavaScript function passeed in as an argument. The function is called everytime `back button` is pressed |
 | onSelectedItemsChange | Yes      | (Function) JavaScript function passed in as an argument. The function is to be defined with an argument (selectedItems). Triggered when `Submit` button is clicked (for multi select) or item is clicked (for single select). (Check sample above) |
+| onToggleList | No | (Function) JavaScript function passed in as an argument. The function is called everytime the `multiselect` component is pressed |
 | searchInputPlaceholderText | No      | (String) Placeholder text displayed in multi-select filter input |
 | searchInputStyle | No   | (Object) Style object for multi-select input element  |
 | selectText | No     | (String) Text displayed in main component |
