@@ -38,76 +38,168 @@ import MultiSelect from 'react-native-multiple-select';
 
 class MultiSelectExample extends Component {
 
-  this.state = {
-    selectedItems = [];
-  };
+ state = {
+  demo1_SelectText: 'Demo 1 Field', 
+  demo1_ItemsList: ROLE_OPTIONS, 
+  demo1_SelectedItems: [], 
+  demo2_SelectText: 'Demo 2 Field',
+  demo2_ItemsList: LICENCE_OPTIONS,
+  demo2_SelectedItems: [], 
+ };
 
-  this.items = [{
-    id: '92iijs7yta',
-    name: 'Ondo',
-  }, {
-    id: 'a0s0a8ssbsd',
-    name: 'Ogun',
-  }, {
-    id: '16hbajsabsd',
-    name: 'Calabar',
-  }, {
-    id: 'nahs75a5sg',
-    name: 'Lagos',
-  }, {
-    id: '667atsas',
-    name: 'Maiduguri',
-  }, {
-    id: 'hsyasajs',
-    name: 'Anambra',
-  }, {
-    id: 'djsjudksjd',
-    name: 'Benue',
-  }, {
-    id: 'sdhyaysdj',
-    name: 'Kaduna',
-  }, {
-    id: 'suudydjsjd',
-    name: 'Abuja',
-  }];
+ items = [{
+  id: '92iijs7yta',
+  name: 'Ondo',
+ }, {
+  id: 'a0s0a8ssbsd',
+  name: 'Ogun',
+ }, {
+  id: '16hbajsabsd',
+  name: 'Calabar',
+ }, {
+  id: 'nahs75a5sg',
+  name: 'Lagos',
+ }, {
+  id: '667atsas',
+  name: 'Maiduguri',
+ }, {
+  id: 'hsyasajs',
+  name: 'Anambra',
+ }, {
+  id: 'djsjudksjd',
+  name: 'Benue',
+ }, {
+  id: 'sdhyaysdj',
+  name: 'Kaduna',
+ }, {
+  id: 'suudydjsjd',
+  name: 'Abuja',
+ }];
 
-  onSelectedItemsChange = selectedItems => {
-    this.setState({ selectedItems });
-  };
+ // // Call the action creator 
+ demo1_OnSelectedItemsChange = (selectedItems) => {
+  console.log('demo1_OnSelectedItemsChange - SelectedItems: ', selectedItems);
+  // Add your code here for using the selcted value in your app
 
-  render() {
-    const { selectedItems } = this.state;
-    return (
-      <View style={{ flex: 1 }}>
-        <MultiSelect
-          hideTags
-          items={items}
-          uniqueKey="id"
-          ref={(component) => { this.multiSelect = component }}
-          onSelectedItemsChange={this.onSelectedItemsChange}
-          selectedItems={selectedItems}
-          selectText="Pick Items"
-          searchInputPlaceholderText="Search Items..."
-          onChangeInput={ (text)=> console.log(text)}
-          altFontFamily="ProximaNova-Light"
-          tagRemoveIconColor="#CCC"
-          tagBorderColor="#CCC"
-          tagTextColor="#CCC"
-          selectedItemTextColor="#CCC"
-          selectedItemIconColor="#CCC"
-          itemTextColor="#000"
-          displayKey="name"
-          searchInputStyle={{ color: '#CCC' }}
-          submitButtonColor="#CCC"
-          submitButtonText="Submit"
-        />
-        <View>
-          {this.multiSelect.getSelectedItemsExt(selectedItems)}
-        </View>
-      </View>
-    );
-  }
-}
+  this.setState({ 
+   // To set the "selectText" prop to the selected value 
+   // Can be useful for components with "single" selections (where the prop "single" is set) 
+   demo1_SelectText: selectedItems[0],
+  }); 
+ }; 
+
+ demo1_OnAddItem = (newItemsList) => {
+  console.log('demo1_OnAddItem - newItemsList: ', newItemsList, ' - length: ', newItemsList.length);
+  // You can add your code here to add the newly added item to the original items list. 
+
+  // 1. Removes the "LAST" element from the new items list. This the item, which was added by the user. 
+  const lastElement = newItemsList.pop(); 
+
+  // 2. Adds the new element (which was extracted above) to the "TOP" of new items list. 
+  // This makes it appear on top of the list. So, it is easier for the user to click on it. 
+  newItemsList.unshift(lastElement); 
+
+  // Note 1: The steps 1 & 2 (above) are optional. 
+
+  // Note 2: Instead of 1 & 2 (above), it would have been better if entering a new value
+  // 	would result in selecting it without the need to select it from the list. 
+    // Check [issue #110](https://github.com/toystars/react-native-multiple-select/issues/110)     
+
+  this.setState({
+   demo1_ItemsList: newItemsList,
+  });
+ }
+
+ demo2_OnSelectedItemsChange = (selectedItems) => {
+  console.log('demo2_OnSelectedItemsChange - SelectedItems: ', selectedItems);
+  // Add your code here for using the selcted value in your app
+
+  this.setState({
+   // Use only for "multiple" selections (where the prop "single" is NOT set) 
+   demo2_SelectedItems: selectedItems,
+  });
+ };
+
+ demo2_OnAddItem = (newItemsList) => {
+  console.log('demo1_OnAddItem - newItemsList: ', newItemsList, ' - length: ', newItemsList.length);
+  // You can add your code here to add the newly added item to the original items list. 
+
+  // 1. Removes the "LAST" element from the new items list. This the item, which was added by the user. 
+  const lastElement = newItemsList.pop();
+
+  // 2. Adds the new element (which was extracted above) to the "TOP" of new items list. 
+  // This makes it appear on top of the list. So, it is easier for the user to click on it. 
+  newItemsList.unshift(lastElement);
+
+  // Note 1: The steps 1 & 2 (above) are optional. 
+
+  // Note 2: Instead of 1 & 2 (above), it would have been better if entering a new value
+  // 	would result in selecting it without the need to select it from the list. 
+    // Check [issue #110](https://github.com/toystars/react-native-multiple-select/issues/110)     
+
+  this.setState({
+   demo2_ItemsList: newItemsList,
+  });
+ }
+
+ render() {
+  return (
+   <View>
+    <View style={styles.multiSelectContainer}>				  	
+     <MultiSelect
+      items={this.state.demo1_ItemsList}
+      uniqueKey="id"
+      displayKey="name"
+
+      selectText={this.state.demo1_SelectText}
+      searchInputPlaceholderText="Select or Type a value"
+      filterMethod="full"
+
+      single={true} 
+
+      onSelectedItemsChange={this.demo1_OnSelectedItemsChange}
+      ref={(component) => { this.demo1_MultiSelect = component; }}
+
+      canAddItems={true}
+      onAddItem={this.demo1_OnAddItem}
+     />
+    </View> 
+    <View>
+     {this.demo1_MultiSelect && this.demo1_MultiSelect.getSelectedItemsExt(this.state.demo1_SelectedItems)}
+    </View>
+
+     <View style={styles.multiSelectContainer}>
+     <MultiSelect
+      items={this.state.demo2_ItemsList}
+      uniqueKey="name"
+      displayKey="name"
+
+      selectText={this.state.demo2_SelectText}
+      searchInputPlaceholderText="Select from the list below or Type a new one"
+      filterMethod="full"
+
+      single={false}
+      selectedItems={this.state.demo2_SelectedItems}
+      hideTags={false}
+      hideSubmitButton={false}
+      submitButtonText="OK" 
+
+      onSelectedItemsChange={this.demo2_OnSelectedItemsChange}
+      ref={(component) => { this.demo2_MultiSelect = component; }}
+
+      canAddItems={true}
+      onAddItem={this.demo2_OnAddItem}
+     />
+    </View>
+    <View>
+     {/* Istead of the prop "hideTags={false}" (above), you can use the following. */}
+     {/* {this.demo2_MultiSelect && this.licenceMultiSelect.getSelectedItemsExt(this.state.licenceSelectedItems)} */}
+    </View> 
+
+   </View>
+  );
+ } // end of: render
+} // end of: component
 
 ```
 
