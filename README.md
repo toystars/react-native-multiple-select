@@ -39,42 +39,43 @@ import MultiSelect from 'react-native-multiple-select';
 class MultiSelectExample extends Component {
 
  state = {
-  demo1_SelectText: 'Demo 1 Field', 
-  demo1_ItemsList: ROLE_OPTIONS, 
-  demo1_SelectedItems: [], 
-  demo2_SelectText: 'Demo 2 Field',
-  demo2_ItemsList: LICENCE_OPTIONS,
-  demo2_SelectedItems: [], 
- };
+   demo1_SelectText: 'Demo 1 Field', 
+   demo1_SelectedItems: [], 
 
- items = [{
-  id: '92iijs7yta',
-  name: 'Ondo',
- }, {
-  id: 'a0s0a8ssbsd',
-  name: 'Ogun',
- }, {
-  id: '16hbajsabsd',
-  name: 'Calabar',
- }, {
-  id: 'nahs75a5sg',
-  name: 'Lagos',
- }, {
-  id: '667atsas',
-  name: 'Maiduguri',
- }, {
-  id: 'hsyasajs',
-  name: 'Anambra',
- }, {
-  id: 'djsjudksjd',
-  name: 'Benue',
- }, {
-  id: 'sdhyaysdj',
-  name: 'Kaduna',
- }, {
-  id: 'suudydjsjd',
-  name: 'Abuja',
- }];
+   demo1_ItemsList: [{
+   id: '11',
+   name: 'Orange',
+   }, {
+   id: '12',
+   name: 'Apple',
+   }, {
+   id: '13',
+   name: 'Banana',
+   }, {
+   id: '14',
+   name: 'Tomato',
+   }], 
+   
+   demo2_SelectText: 'Demo 2 Field',
+   demo2_SelectedItems: [], 
+
+   demo2_ItemsList: [{
+   id: '21',
+   name: 'Red',
+   }, {
+   id: '22',
+   name: 'Yellow',
+   }, {
+   id: '23',
+   name: 'White',
+   }, {
+   id: '24',
+   name: 'Blue',
+   }, {
+   id: '25',
+   name: 'Black',
+   }], 
+};
 
  // // Call the action creator 
  demo1_OnSelectedItemsChange = (selectedItems) => {
