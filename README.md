@@ -43,37 +43,37 @@ class MultiSelectExample extends Component {
    demo1_SelectedItems: [], 
 
    demo1_ItemsList: [{
-   id: '11',
-   name: 'Orange',
-   }, {
-   id: '12',
-   name: 'Apple',
-   }, {
-   id: '13',
-   name: 'Banana',
-   }, {
-   id: '14',
-   name: 'Tomato',
+     id: '11',
+     name: 'Orange',
+     }, {
+     id: '12',
+     name: 'Apple',
+     }, {
+     id: '13',
+     name: 'Banana',
+     }, {
+     id: '14',
+     name: 'Tomato',
    }], 
    
    demo2_SelectText: 'Demo 2 Field',
    demo2_SelectedItems: [], 
 
    demo2_ItemsList: [{
-   id: '21',
-   name: 'Red',
-   }, {
-   id: '22',
-   name: 'Yellow',
-   }, {
-   id: '23',
-   name: 'White',
-   }, {
-   id: '24',
-   name: 'Blue',
-   }, {
-   id: '25',
-   name: 'Black',
+     id: '21',
+     name: 'Red',
+     }, {
+     id: '22',
+     name: 'Yellow',
+     }, {
+     id: '23',
+     name: 'White',
+     }, {
+     id: '24',
+     name: 'Blue',
+     }, {
+     id: '25',
+     name: 'Black',
    }], 
 };
 
@@ -146,7 +146,7 @@ class MultiSelectExample extends Component {
  render() {
   return (
    <View>
-    <View style={styles.multiSelectContainer}>				  	
+    <View>				  	
      <MultiSelect
       items={this.state.demo1_ItemsList}
       uniqueKey="id"
@@ -169,7 +169,7 @@ class MultiSelectExample extends Component {
      {this.demo1_MultiSelect && this.demo1_MultiSelect.getSelectedItemsExt(this.state.demo1_SelectedItems)}
     </View>
 
-     <View style={styles.multiSelectContainer}>
+     <View>
      <MultiSelect
       items={this.state.demo2_ItemsList}
       uniqueKey="name"
