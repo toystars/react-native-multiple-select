@@ -166,6 +166,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | uniqueKey      | Yes      | (String) Unique identifier that is part of each item's properties. Used internally as means of identifying each item (Check sample below) |
 |selectedItems | No      | (Array, control prop) List of selected items keys . JavaScript Array of strings, that can be instantiated with the component |
 | removeSelected | No  | (Boolean) Filter selected items from list to be shown in List |
+| autoFocus | No  | (Boolean) Defaults to true. Toggles search input auto focus on dropdown list open. |
 
 ## Note
 
