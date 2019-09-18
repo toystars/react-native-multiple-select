@@ -38,11 +38,11 @@ import MultiSelect from 'react-native-multiple-select';
 
 class MultiSelectExample extends Component {
 
-  this.state = {
-    selectedItems = [];
+  state = {
+    selectedItems = []
   };
 
-  this.items = [{
+  items = [{
     id: '92iijs7yta',
     name: 'Ondo',
   }, {
@@ -81,7 +81,7 @@ class MultiSelectExample extends Component {
       <View style={{ flex: 1 }}>
         <MultiSelect
           hideTags
-          items={items}
+          items={this.items}
           uniqueKey="id"
           ref={(component) => { this.multiSelect = component }}
           onSelectedItemsChange={this.onSelectedItemsChange}
