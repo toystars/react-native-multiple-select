@@ -1,6 +1,6 @@
 {
   "name": "react-native-multiple-select",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "Simple multi-select component for react-native",
   "main": "index.js",
   "scripts": {
