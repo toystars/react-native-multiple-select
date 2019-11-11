@@ -8,6 +8,7 @@ export interface MultiSelectProps {
     selectedItems?: any[];
     items: any[];
     uniqueKey?: string,
+    value?: string,
     tagBorderColor?: string;
     tagTextColor?: string;
     fontFamily?: string;
