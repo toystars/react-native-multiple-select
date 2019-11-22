@@ -38,11 +38,11 @@ import MultiSelect from 'react-native-multiple-select';
 
 class MultiSelectExample extends Component {
 
-  this.state = {
+  state = {
     selectedItems = [];
   };
 
-  this.items = [{
+  items = [{
     id: '92iijs7yta',
     name: 'Ondo',
   }, {

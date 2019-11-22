@@ -1,4 +1,4 @@
-// Type definitions for react-native-multiple-select 0.5
+// Type definitions for react-native-multiple-select
 
 import * as React from "react";
 import { ViewStyle, TextStyle, TextInputProps, StyleProp, FlatListProps } from 'react-native';

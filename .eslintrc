@@ -3,10 +3,10 @@
   "env": {
     "es6": true,
     "node": true,
-    "browser": true,
+    "browser": true
   },
   "parser": "babel-eslint",
-  "plugins": ["react-native"],
+  "plugins": ["react","jsx-a11y", "import", "react-native"],
   "rules": {
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
     "react/require-default-props": "off",
@@ -16,5 +16,7 @@
     "no-underscore-dangle": "off",
     "comma-dangle": "off",
     "quotes": "off",
+    "arrow-parens": 0,
+    "jsx-one-expression-per-line": 0
   }
 }
