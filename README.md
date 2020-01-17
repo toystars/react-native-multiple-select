@@ -1,3 +1,4 @@
+
 # react-native-multiple-select
 
 [![npm](https://img.shields.io/npm/v/react-native-multiple-select.svg)](https://www.npmjs.com/package/react-native-multiple-select) [![Downloads](https://img.shields.io/npm/dt/react-native-multiple-select.svg)](https://www.npmjs.com/package/react-native-multiple-select) [![Licence](https://img.shields.io/npm/l/react-native-multiple-select.svg)](https://www.npmjs.com/package/react-native-multiple-select)
@@ -145,6 +146,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | searchInputPlaceholderText | No      | (String) Placeholder text displayed in multi-select filter input |
 | searchInputStyle | No   | (Object) Style object for multi-select input element  |
 | selectText | No     | (String) Text displayed in main component |
+| selectedText | No     | (String) Text displayed when choosed one or one more records selected for example "2 records selected" < you are setting "selected" text when enter this prop. |
 | selectedItemFontFamily | No   | (String) Font family for each selected item in multi-select drop-down |
 | selectedItemIconColor | No     | (String) Color for `selected` check icon for each selected item in multi-select drop-down |
 | selectedItemTextColor | No   | (String) Text color for each selected item in multi-select drop-down |
