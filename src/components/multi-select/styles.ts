@@ -1,3 +1,9 @@
+/*!
+ * react-native-multi-select
+ * Copyright(c) 2020 Mustapha Babatunde Oluwaleke
+ * MIT Licensed
+ */
+
 import { StyleSheet } from 'react-native';
 import { ColorsPack } from '../../styles/colors.enum';
 
@@ -45,5 +51,40 @@ export default StyleSheet.create({
     selectedItemsTagsContainer: {
         flexDirection: 'row',
         flexWrap: 'wrap'
-    }
+    },
+    dropdownView: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        height: 40,
+        marginBottom: 10
+    },
+    subSection: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center',
+        backgroundColor: ColorsPack.light,
+        borderBottomWidth: 1,
+        borderColor: ColorsPack.borderColor,
+        paddingTop: 10,
+        paddingBottom: 10,
+        paddingLeft: 0,
+        paddingRight: 20
+    },
+    collapsedViewInfoWrapper: {
+        flex: 1,
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    collapsedViewInfoLabel: {
+        flex: 1,
+        fontSize: 16,
+        color: ColorsPack.placeholderTextColor
+    },
+    collapsedViewInfoLabel_itemSelected: {
+        color: ColorsPack.textPrimary
+    },
+    indicator: {
+        fontSize: 30,
+        color: ColorsPack.placeholderTextColor,
+    },
 });

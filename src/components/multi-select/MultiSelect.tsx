@@ -1,3 +1,9 @@
+/*!
+ * react-native-multi-select
+ * Copyright(c) 2020 Mustapha Babatunde Oluwaleke
+ * MIT Licensed
+ */
+
 import React, { Component } from 'react';
 import {
   Text,
@@ -5,25 +11,19 @@ import {
   TouchableWithoutFeedback,
   TouchableOpacity,
   FlatList,
-  UIManager,
-  Platform
+  UIManager
 } from 'react-native';
-// import reject from 'lodash/reject';
-// import find from 'lodash/find';
-// import get from 'lodash/get';
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { ExpandedMultiSelectView } from '../expanded-multi-select-view';
 import { SelectedItemTag } from '../selected-item-tag';
-import { generateRandomId } from '../../utils';
-import { MultiSelectProps, MultiSelectState, MultiSelectItem } from '../types';
+import { generateRandomId, getPlatformIcon } from '../../utils';
+import { MultiSelectProps, MultiSelectState, MultiSelectItem } from '../../types';
 import styles from './styles';
-
 
 // set UIManager LayoutAnimationEnabledExperimental
 if (UIManager.setLayoutAnimationEnabledExperimental) {
   UIManager.setLayoutAnimationEnabledExperimental(true);
 }
-
 
 export class MultiSelect extends Component<MultiSelectProps, MultiSelectState> {
 
@@ -35,6 +35,22 @@ export class MultiSelect extends Component<MultiSelectProps, MultiSelectState> {
         };
     }
 
+    get selectionDisplayLabel() {
+        const { isSingleSelection, selectedItems } = this.props;
+
+        if (!selectedItems || selectedItems.length === 0) {
+            return 'No item selected';
+        }
+
+        if (isSingleSelection) {
+            const selectedItemId = selectedItems[0];
+            const selectedItem = this.findItem(selectedItemId);
+            return selectedItem.title;
+        }
+
+        return `(${selectedItems.length} item${selectedItems.length > 1 ? 's' : ''} selected)`;
+    };
+
     getSelectedItemsExt = () => this.renderSelectedItemsTags();
 
     onChangeSearchTerm = (searchTerm: string) => {
@@ -45,19 +61,6 @@ export class MultiSelect extends Component<MultiSelectProps, MultiSelectState> {
         this.toggleSelector();
         this.clearSearchTerm();
     };
-
-  _getSelectLabel = () => {
-    const { selectText, isSingleSelection: single, selectedItems, displayKey } = this.props;
-    if (!selectedItems || selectedItems.length === 0) {
-      return selectText;
-    }
-    if (single) {
-      const item = selectedItems[0];
-      const foundItem = this._findItem(item);
-      return get(foundItem, displayKey) || selectText;
-    }
-    return `${selectText} (${selectedItems.length} selected)`;
-  };
 
     findItem = (id: string) => {
         const { items } = this.props;
@@ -152,7 +155,7 @@ export class MultiSelect extends Component<MultiSelectProps, MultiSelectState> {
                 </Text>
                 {isItemSelected && (
                     <Ionicons
-                        name={Platform.OS === 'ios' ? 'ios-checkmark-outline' : 'md-checkmark-outline'}
+                        name={getPlatformIcon('checkmark-outline')}
                         style={styles.selectedSingleItemIcon}
                     />
                 )}
@@ -230,63 +233,23 @@ export class MultiSelect extends Component<MultiSelectProps, MultiSelectState> {
     }
 
     _renderCollapsedMultiSelectView = () => {
-        const { isSingleSelection, hideTags, selectedItems } = this.props;
+        const { isSingleSelection, hideTags, selectedItems, hideSubmitButton } = this.props;
         const showSelectedItems = !isSingleSelection && !hideTags && selectedItems.length;
+        const additionalStyles = selectedItems.length ? styles.collapsedViewInfoLabel_itemSelected : {};
         return (
             <View>
-                <View
-                    style={[
-                        styles.dropdownView,
-                        styleDropdownMenu && styleDropdownMenu
-                    ]}
-                >
-                    <View
-                        style={[
-                            styles.subSection,
-                            { paddingTop: 10, paddingBottom: 10 },
-                            styleDropdownMenuSubsection && styleDropdownMenuSubsection
-                        ]}
-                    >
-                        <TouchableWithoutFeedback onPress={this._toggleSelector}>
-                            <View
-                                style={{
-                                    flex: 1,
-                                    flexDirection: 'row',
-                                    alignItems: 'center'
-                                }}
-                            >
+                <View style={styles.dropdownView}>
+                    <View style={styles.subSection}>
+                        <TouchableWithoutFeedback onPress={this.toggleSelector}>
+                            <View style={styles.collapsedViewInfoWrapper}>
                                 <Text
-                                    style={
-                                        !selectedItems || selectedItems.length === 0
-                                            ? [
-                                                {
-                                                    flex: 1,
-                                                    fontSize: fontSize || 16,
-                                                    color:
-                                                        textColor || colorPack.placeholderTextColor
-                                                },
-                                                styleTextDropdown && styleTextDropdown,
-                                                altFontFamily
-                                                    ? { fontFamily: altFontFamily }
-                                                    : fontFamily
-                                                        ? { fontFamily }
-                                                        : {}
-                                            ]
-                                            : [
-                                                {
-                                                    flex: 1,
-                                                    fontSize: fontSize || 16,
-                                                    color:
-                                                        textColor || colorPack.placeholderTextColor
-                                                }
-                                            ]
-                                    }
+                                    style={[styles.collapsedViewInfoLabel, additionalStyles]}
                                     numberOfLines={1}
                                 >
-                                    {this._getSelectLabel()}
+                                    {this.selectionDisplayLabel}
                                 </Text>
                                 <Ionicons
-                                    name={hideSubmitButton ? 'menu-right' : 'menu-down'}
+                                    name={hideSubmitButton ? getPlatformIcon('caret-forward') : getPlatformIcon('caret-down')}
                                     style={styles.indicator}
                                 />
                             </View>
@@ -300,10 +263,6 @@ export class MultiSelect extends Component<MultiSelectProps, MultiSelectState> {
 
     render() {
         const { isMultiSelectExpanded } = this.state;
-        return (
-            <View style={{}}>
-                {isMultiSelectExpanded ? this._renderExpandedMultiSelectView() : this._renderCollapsedMultiSelectView()}
-            </View>
-        );
+        return isMultiSelectExpanded ? this._renderExpandedMultiSelectView() : this._renderCollapsedMultiSelectView();
     }
 }

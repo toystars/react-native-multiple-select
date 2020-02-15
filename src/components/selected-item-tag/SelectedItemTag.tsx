@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, TouchableOpacity, Platform, Text } from 'react-native';
+import { View, TouchableOpacity, Text } from 'react-native';
 import Ionicons from "react-native-vector-icons/Ionicons";
-import { MultiSelectItem } from '../types';
+import { getPlatformIcon } from '../../utils';
+import { MultiSelectItem } from '../../types';
 import styles from './styles';
 
 interface Props {
@@ -18,7 +19,7 @@ export const SelectedItemTag = React.memo(({ item, removeItem }: Props) => {
             </Text>
             <TouchableOpacity onPress={() => removeItem(item)}>
                 <Ionicons
-                    name={Platform.OS === 'ios' ? 'ios-close-circle' : 'md-close-circle'}
+                    name={getPlatformIcon('close-circle')}
                     style={styles.selectedItemTagIcon}
                 />
             </TouchableOpacity>

@@ -1,3 +1,9 @@
+/*!
+ * react-native-multi-select
+ * Copyright(c) 2020 Mustapha Babatunde Oluwaleke
+ * MIT Licensed
+ */
+
 import { StyleSheet } from 'react-native';
 import { ColorsPack } from '../../styles/colors.enum';
 

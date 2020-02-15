@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, TextInput, TouchableOpacity, Platform, Text } from 'react-native';
+import { View, TextInput, TouchableOpacity, Text } from 'react-native';
 import Ionicons from "react-native-vector-icons/Ionicons";
 import { SearchIcon } from '../search-icon';
+import { getPlatformIcon } from '../../utils';
 import { ColorsPack } from '../../styles/colors.enum';
 import styles from './styles';
 
@@ -43,7 +44,7 @@ export class ExpandedMultiSelectView extends React.Component<Props> {
                     {hideSubmitButton && (
                         <TouchableOpacity onPress={onSubmitButtonPress}>
                             <Ionicons
-                                name={Platform.OS === 'ios' ? 'ios-caret-down-outline' : 'md-caret-down-outline'}
+                                name={getPlatformIcon('caret-down-outline')}
                                 style={styles.indicator}
                             />
                         </TouchableOpacity>

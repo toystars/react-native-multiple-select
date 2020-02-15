@@ -4,5 +4,8 @@
  * MIT Licensed
  */
 
-export { MultiSelect } from './components/multi-select';
-export {  } from './types';
+export interface MultiSelectItem {
+    id: string;
+    title: string;
+    disabled?: boolean;
+}
