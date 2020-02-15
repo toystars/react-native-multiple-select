@@ -30,6 +30,11 @@ coverage
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
+# builds
+build
+dist
+.rpt2_cache
+
 # Dependency directories
 node_modules
 jspm_packages
