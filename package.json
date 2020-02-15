@@ -2,7 +2,8 @@
     "name": "react-native-multiple-select",
     "version": "0.5.5",
     "description": "Simple multi-select component for react-native",
-    "main": "index.js",
+    "main": "build/index.js",
+    "types": "build/index.d.ts",
     "scripts": {
         "build": "tsc",
         "precommit": "lint-staged",

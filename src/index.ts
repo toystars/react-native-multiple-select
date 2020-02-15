@@ -5,4 +5,4 @@
  */
 
 export { MultiSelect } from './components/multi-select';
-export {  } from './types';
+export {MultiSelectItem  } from './types';
