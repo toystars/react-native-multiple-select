@@ -10,13 +10,13 @@ import {
   ViewPropTypes
 } from 'react-native';
 import PropTypes from 'prop-types';
-import reject from 'lodash/reject';
-import find from 'lodash/find';
-import get from 'lodash/get';
+// import reject from 'lodash/reject';
+// import find from 'lodash/find';
+// import get from 'lodash/get';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
-import styles, { colorPack } from './styles';
-import nodeTypes from './helpers/nodeTypes';
+import styles, { colorPack } from '../../styles';
+import nodeTypes from '../../helpers/nodeTypes';
 
 // set UIManager LayoutAnimationEnabledExperimental
 if (UIManager.setLayoutAnimationEnabledExperimental) {
@@ -32,7 +32,7 @@ const defaultSearchIcon = (
   />
 );
 
-export default class MultiSelect extends Component {
+export class MultiSelect extends Component {
   static propTypes = {
     single: PropTypes.bool,
     selectedItems: PropTypes.array,
