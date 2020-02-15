@@ -4,6 +4,7 @@
     "description": "Simple multi-select component for react-native",
     "main": "index.js",
     "scripts": {
+        "build": "tsc",
         "precommit": "lint-staged",
         "test": "jest",
         "lint": "eslint lib/"
@@ -33,10 +34,11 @@
         "url": "https://github.com/toystars/react-native-multiple-select/issues"
     },
     "homepage": "https://github.com/toystars/react-native-multiple-select#readme",
-    "dependencies": {
-        "prop-types": "^15.7.2"
-    },
+    "dependencies": {},
     "devDependencies": {
+        "@types/react": "^16.9.19",
+        "@types/react-native": "^0.61.15",
+        "@types/react-native-vector-icons": "^6.4.5",
         "babel-eslint": "^10.0.2",
         "babel-jest": "24.9.0",
         "babel-preset-react-native": "^4.0.1",
