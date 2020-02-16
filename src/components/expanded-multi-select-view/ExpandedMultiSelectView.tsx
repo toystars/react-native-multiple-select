@@ -27,6 +27,7 @@ export class ExpandedMultiSelectView extends React.Component<Props> {
             onSubmitButtonPress,
             children
         } = this.props;
+        const showSubmitButton = !singleSelection && !hideSubmitButton;
         return (
             <View style={styles.container}>
                 <View style={styles.inputGroup}>
@@ -41,24 +42,24 @@ export class ExpandedMultiSelectView extends React.Component<Props> {
                         style={styles.searchInput}
                         value={searchTerm}
                     />
-                    {hideSubmitButton && (
+                    {hideSubmitButton ? (
                         <TouchableOpacity onPress={onSubmitButtonPress}>
                             <Ionicons
                                 name={getPlatformIcon('caret-down-outline')}
                                 style={styles.indicator}
                             />
                         </TouchableOpacity>
-                    )}
+                    ) : null}
                 </View>
                 <View style={styles.expandedItemsContainer}>
                     {children}
-                    {!singleSelection && !hideSubmitButton && (
+                    {showSubmitButton ? (
                         <TouchableOpacity onPress={onSubmitButtonPress} style={styles.submitButton}>
                             <Text style={styles.submitButtonText}>
                                 Submit
                             </Text>
                         </TouchableOpacity>
-                    )}
+                    ) : null}
                 </View>
             </View>
         );

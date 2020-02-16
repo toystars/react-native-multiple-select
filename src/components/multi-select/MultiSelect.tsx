@@ -48,7 +48,7 @@ export class MultiSelect extends Component<MultiSelectProps, MultiSelectState> {
             return selectedItem.title;
         }
 
-        return `(${selectedItems.length} item${selectedItems.length > 1 ? 's' : ''} selected)`;
+        return `${selectedItems.length} item${selectedItems.length > 1 ? 's' : ''} selected`;
     };
 
     getSelectedItemsExt = () => this.renderSelectedItemsTags();
@@ -153,12 +153,12 @@ export class MultiSelect extends Component<MultiSelectProps, MultiSelectState> {
                 <Text style={[styles.singleItemLabel, selectedItemStyle, disabledItemStyle]}>
                     {item.title}
                 </Text>
-                {isItemSelected && (
+                {isItemSelected ? (
                     <Ionicons
                         name={getPlatformIcon('checkmark-outline')}
                         style={styles.selectedSingleItemIcon}
                     />
-                )}
+                ) : null}
             </TouchableOpacity>
         );
     };
@@ -256,7 +256,7 @@ export class MultiSelect extends Component<MultiSelectProps, MultiSelectState> {
                         </TouchableWithoutFeedback>
                     </View>
                 </View>
-                {showSelectedItems && this.renderSelectedItemsTags()}
+                {showSelectedItems ? this.renderSelectedItemsTags() : null}
             </View>
         );
     }
