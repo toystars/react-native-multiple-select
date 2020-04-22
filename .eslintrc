@@ -17,6 +17,7 @@
     "comma-dangle": "off",
     "quotes": "off",
     "arrow-parens": 0,
-    "jsx-one-expression-per-line": 0
+    "jsx-one-expression-per-line": 0,
+    "import/prefer-default-export": 0
   }
 }
