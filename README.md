@@ -138,7 +138,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | itemTextColor | No   | (String) Text color for each non-selected item in multi-select drop-down |
 | items      | Yes | (Array, control prop) List of items to display in the multi-select component. JavaScript Array of objects. Each object must contain a name and unique identifier (Check sample above) |
 | onAddItem | No   | (Function) JavaScript function passed in as an argument. The function is called everytime a new item is added, and receives the entire list of items. Here you should ensure that the new items are added to your provided list of `items` in addition to any other consequences of new items being added. |
-| onChangeInput | No    | (Function) JavaScript function passed in as an argument. The function is called everytime `TextInput` is changed with the value. |
+| onChangeInput | No    | (Function) JavaScript function passed in as an argument. The function is called everytime the search's `TextInput` is changed with the value. |
 | onClearSelector | No | (Function) JavaScript function passeed in as an argument. The function is called everytime `back button` is pressed |
 | onSelectedItemsChange | Yes      | (Function) JavaScript function passed in as an argument. The function is to be defined with an argument (selectedItems). Triggered when `Submit` button is clicked (for multi select) or item is clicked (for single select). (Check sample above) |
 | onToggleList | No | (Function) JavaScript function passed in as an argument. The function is called everytime the `multiselect` component is pressed |
@@ -165,7 +165,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | tagRemoveIconColor | No      | (String) Color to be used for the remove icon in selected items list |
 | tagTextColor | No  | (String) Text color for selected items list |
 | textColor | No     | (String) Color for selected item name displayed as label for multiselect  |
-| textInputProps | No | (Object) Properties for the Text Input. Pass any property that is required on the text input |
+| textInputProps | No | (Object) Properties for search's `TextInput`. Pass any property that is required on the text input |
 | uniqueKey      | Yes      | (String) Unique identifier that is part of each item's properties. Used internally as means of identifying each item (Check sample below) |
 |selectedItems | No      | (Array, control prop) List of selected items keys . JavaScript Array of strings, that can be instantiated with the component |
 | removeSelected | No  | (Boolean) Filter selected items from list to be shown in List |
