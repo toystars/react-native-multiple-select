@@ -6,7 +6,8 @@
   "scripts": {
     "precommit": "lint-staged",
     "test": "jest",
-    "lint": "eslint lib/"
+    "lint": "eslint lib/",
+    "publish": "npm publish --access public"
   },
   "jest": {
     "preset": "jest-react-native"
