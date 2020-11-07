@@ -69,7 +69,7 @@ const items = [{
 class MultiSelectExample extends Component {
 
   state = {
-    selectedItems : [];
+    selectedItems : [],
   };
 
   
