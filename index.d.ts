@@ -23,6 +23,7 @@ export interface MultiSelectProps {
     searchInputPlaceholderText?: string;
     searchInputStyle?: StyleProp<TextStyle>;
     selectText?: string;
+    selectedText?: string;
     styleDropdownMenu?: StyleProp<ViewStyle>;
     styleDropdownMenuSubsection?: StyleProp<ViewStyle>;
     styleInputGroup?: StyleProp<ViewStyle>;
