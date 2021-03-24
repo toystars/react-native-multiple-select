@@ -4,6 +4,7 @@ import * as React from "react";
 import { ViewStyle, TextStyle, TextInputProps, StyleProp, FlatListProps } from 'react-native';
 
 export interface MultiSelectProps {
+    loading?: boolean;
     single?: boolean;
     selectedItems?: any[];
     items: any[];
