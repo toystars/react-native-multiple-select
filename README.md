@@ -137,6 +137,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | itemFontSize | No   | (Number) Font size used for each item in the multi-select drop-down |
 | itemTextColor | No   | (String) Text color for each non-selected item in multi-select drop-down |
 | items      | Yes | (Array, control prop) List of items to display in the multi-select component. JavaScript Array of objects. Each object must contain a name and unique identifier (Check sample above) |
+|noItemsText| No| (String) Text that replace default "no items to display"|
 | onAddItem | No   | (Function) JavaScript function passed in as an argument. The function is called everytime a new item is added, and receives the entire list of items. Here you should ensure that the new items are added to your provided list of `items` in addition to any other consequences of new items being added. |
 | onChangeInput | No    | (Function) JavaScript function passed in as an argument. The function is called everytime `TextInput` is changed with the value. |
 | onClearSelector | No | (Function) JavaScript function passeed in as an argument. The function is called everytime `back button` is pressed |
