@@ -161,6 +161,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | styleTextDropdown | No | (Text Style) Style text of the Dropdown |
 | styleTextDropdownSelected | No | (Text Style) Style text of the Dropdown selected |
 | styleTextTag | No | (Text Style) Style text of the tag |
+| styleIndicator | No | (Style) Style the Icon for indicator |
 | submitButtonColor | No   | (String) Background color for submit button  |
 | submitButtonText | No   | (String) Text displayed on submit button  |
 | tagBorderColor | No      | (String) Border color for each selected item  |
