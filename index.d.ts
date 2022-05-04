@@ -44,6 +44,7 @@ export interface MultiSelectProps {
     fixedHeight?: boolean;
     hideTags?: boolean,
     canAddItems?: boolean;
+    onToggleList?: () => void;
     onAddItem?: (newItems: any[]) => void;
     onChangeInput?: (text: string) => void;
     displayKey?: string;
