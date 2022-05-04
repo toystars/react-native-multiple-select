@@ -25,6 +25,7 @@ export interface MultiSelectProps {
     selectText?: string;
     styleDropdownMenu?: StyleProp<ViewStyle>;
     styleDropdownMenuSubsection?: StyleProp<ViewStyle>;
+    styleIndicator?: StyleProp<ViewStyle>;
     styleInputGroup?: StyleProp<ViewStyle>;
     styleItemsContainer?: StyleProp<ViewStyle>;
     styleListContainer?: StyleProp<ViewStyle>;
@@ -43,6 +44,7 @@ export interface MultiSelectProps {
     fixedHeight?: boolean;
     hideTags?: boolean,
     canAddItems?: boolean;
+    onToggleList?: () => void;
     onAddItem?: (newItems: any[]) => void;
     onChangeInput?: (text: string) => void;
     displayKey?: string;

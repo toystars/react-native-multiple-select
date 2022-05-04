@@ -152,6 +152,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | single | No     | (Boolean) Toggles select component between single option and multi option |
 | styleDropdownMenu | No | (Style) Style the view of the dropdown menu |
 | styleDropdownMenuSubsection | No | (Style) Style the inner view of the dropdown menu |
+| styleIndicator | No | (Style) Style the Icon for indicator |
 | styleInputGroup | No | (Style) Style the Container of the Text Input Group |
 | styleItemsContainer | No | (Style) Style the Container of the items that are displayed in a list |
 | styleListContainer | No | (Style) Style the Container of main list. See [this issue] (https://github.com/toystars/react-native-multiple-select/issues/12)|
