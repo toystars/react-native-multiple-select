@@ -132,7 +132,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | hideDropdown | No | (Boolean) Defaults false. Hide dropdown menu with a cancel, and use arrow-back |
 | hideSubmitButton | No | (Boolean) Defaults to false. Hide submit button from dropdown, and rather use arrow-button in search field |
 | hideTags | No | (Boolean) Defaults to false. Hide tokenized selected items, in case selected items are to be shown somewhere else in view (check below for more info) |
-| iconSearch | No | (Element, Object, boolean, Function) Element or functional component to change the Search Icon |
+| searchIcon | No | (Element, Object, boolean, Function) Element or functional component to change the Search Icon |
 | itemFontFamily | No   | (String) Font family for each non-selected item in multi-select drop-down |
 | itemFontSize | No   | (Number) Font size used for each item in the multi-select drop-down |
 | itemTextColor | No   | (String) Text color for each non-selected item in multi-select drop-down |
