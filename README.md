@@ -137,7 +137,6 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | itemFontSize | No   | (Number) Font size used for each item in the multi-select drop-down |
 | itemTextColor | No   | (String) Text color for each non-selected item in multi-select drop-down |
 | items      | Yes | (Array, control prop) List of items to display in the multi-select component. JavaScript Array of objects. Each object must contain a name and unique identifier (Check sample above) |
-|noItemsText| No| (String) Text that replace default "no items to display"|
 | onAddItem | No   | (Function) JavaScript function passed in as an argument. The function is called everytime a new item is added, and receives the entire list of items. Here you should ensure that the new items are added to your provided list of `items` in addition to any other consequences of new items being added. |
 | onChangeInput | No    | (Function) JavaScript function passed in as an argument. The function is called everytime `TextInput` is changed with the value. |
 | onClearSelector | No | (Function) JavaScript function passeed in as an argument. The function is called everytime `back button` is pressed |
@@ -174,7 +173,7 @@ The component takes 3 compulsory props - `items`, `uniqueKey` and `onSelectedIte
 | uniqueKey      | Yes      | (String) Unique identifier that is part of each item's properties. Used internally as means of identifying each item (Check sample below) |
 |selectedItems | No      | (Array, control prop) List of selected items keys . JavaScript Array of strings, that can be instantiated with the component |
 | removeSelected | No  | (Boolean) Filter selected items from list to be shown in List |
-| noItemsText | No | (String) Empty selection message |
+| emptySelectionText | No | (String) Empty selection message |
 ## Note
 
 - Tokenized selected items can be displayed in any other part of the view by adding a `ref` to the `MultiSelect` component like so `ref={(component) => { this.multiSelect = component }}`. Then add this to any part of the screen you want the tokens to show up: `this.multiSelect.getSelectedItemsExt(selectedItems)`. The `selectedItems` argument passed into the above mentioned method is the same `selectedItems` passed as the main component selected items prop. (See example above).

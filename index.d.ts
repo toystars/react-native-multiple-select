@@ -51,7 +51,7 @@ export interface MultiSelectProps {
     textInputProps?: TextInputProps;
     flatListProps?: FlatListProps<any>;
     filterMethod?: string;
-    noItemsText?: string;
+    emptySelectionText?: string;
     selectedText?: string;
 }
 
