@@ -1,6 +1,6 @@
 {
   "name": "react-native-multiple-select",
-  "version": "0.5.9",
+  "version": "0.5.12",
   "description": "Simple multi-select component for react-native",
   "main": "index.js",
   "scripts": {
@@ -56,6 +56,7 @@
     "remote-redux-devtools": "^0.5.16"
   },
   "peerDependencies": {
+    "deprecated-react-native-prop-types": ">2.0.0",
     "lodash": ">4.17.00",
     "react": ">16.6.0",
     "react-native": ">0.57.0",
